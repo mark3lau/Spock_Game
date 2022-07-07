@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Libre+Franklin:wght@300&family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+header {
+    background-color: #232829;
+}
+
+h1 {
+    font-family: 'press start 2p', Helvetica, sans-serif;
+    color: #ff91a4;
+    font-size: 400%;
+    text-align: center;
+    padding: 3%;
+}
