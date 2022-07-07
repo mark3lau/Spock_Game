@@ -32,14 +32,33 @@ h1 {
 }
 
 .player-name {
-    margin-left: 25%;
+    margin-left: 20%;
     flex: 1;
 }
 
 .computer-name {
-    margin-right: 25%;
+    margin-right: 20%;
 }
 
+.score-area {
+    font-size: 400%;
+    /* padding: 2%; */
+    display: flex;
+}
+
+.player-score {
+    margin-left: 25%;
+    flex: 1;
+}
+
+.computer-score {
+    margin-right: 26%;
+}
+
+.notice-area {
+    text-align: center;
+    margin-top: 2%;
+}
 
 
 
