@@ -80,7 +80,11 @@ h1 {
 
 .controls-area i {
     padding: 3%;
-    font-size: 8em;
+    font-size: 6em;
+}
+
+.controls-area i:hover {
+    transform: scale(1.5);
 }
 
 footer {
