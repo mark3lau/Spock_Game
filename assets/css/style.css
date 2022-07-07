@@ -35,33 +35,32 @@ h1 {
 
 .name-area {
     font-size: 300%;
-    margin-top: 5%;
+    margin-top: 3%;
     padding: 2%;
     display: flex;
 }
 
 .player-name {
-    margin-left: 20%;
+    margin-left: 15%;
     flex: 1;
 }
 
 .computer-name {
-    margin-right: 20%;
+    margin-right: 15%;
 }
 
 .score-area {
     font-size: 400%;
-    /* padding: 2%; */
     display: flex;
 }
 
 .player-score {
-    margin-left: 25%;
+    margin-left: 20%;
     flex: 1;
 }
 
 .computer-score {
-    margin-right: 26%;
+    margin-right: 21%;
 }
 
 .notice-area {
@@ -74,6 +73,17 @@ h1 {
     font-size: 300%;
 }
 
+.controls-area {
+    text-align: center;
+    padding: 2%;
+}
 
+.controls-area i {
+    padding: 3%;
+    font-size: 8em;
+}
 
+footer {
+    border-top: 5px solid #ff91a4;
+}
 
