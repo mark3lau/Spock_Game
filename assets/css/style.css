@@ -10,10 +10,19 @@
 
 body {
     font-family: 'space grotesk', Helvetica, sans-serif;
+    background-color: #232829;
+    color: #ff91a4;
+    background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
 header {
-    background-color: #232829;
+    border-bottom: 5px solid #ff91a4;
 }
 
 h1 {
@@ -56,10 +65,14 @@ h1 {
 }
 
 .notice-area {
+    font-size: 300%;
     text-align: center;
     margin-top: 2%;
 }
 
+.game-area {
+    font-size: 300%;
+}
 
 
 
