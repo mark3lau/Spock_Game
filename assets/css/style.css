@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Libre+Franklin:wght@300&family=Press+Start+2P&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Libre+Franklin:wght@300&family=Press+Start+2P&family=Space+Grotesk:wght@500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     border: none;
+}
+
+body {
+    font-family: 'space grotesk', Helvetica, sans-serif;
 }
 
 header {
@@ -17,3 +23,25 @@ h1 {
     text-align: center;
     padding: 3%;
 }
+
+.name-area {
+    font-size: 300%;
+    margin-top: 5%;
+    padding: 2%;
+    display: flex;
+}
+
+.player-name {
+    margin-left: 25%;
+    flex: 1;
+}
+
+.computer-name {
+    margin-right: 25%;
+}
+
+
+
+
+
+
