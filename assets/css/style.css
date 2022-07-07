@@ -33,6 +33,17 @@ h1 {
     padding: 3%;
 }
 
+.rules {
+    text-align: center;
+    margin: 5%;
+}
+
+.username {
+    font-family: 'press start 2p', Helvetica, sans-serif;
+    text-align: center;
+    font-size: 200%;
+}
+
 .name-area {
     font-size: 300%;
     margin-top: 3%;
