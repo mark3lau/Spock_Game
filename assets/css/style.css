@@ -44,58 +44,60 @@ h1 {
     font-size: 200%;
 }
 
-.name-area {
-    font-size: 300%;
+.scoreboard {
+    font-size: 350%;
     margin-top: 3%;
     padding: 2%;
     display: flex;
+    text-align: center;
+    color: #05D0EB;
 }
 
 .player-name {
+    float: left;
     margin-left: 15%;
     flex: 1;
 }
 
 .computer-name {
+    float: right;
     margin-right: 15%;
 }
 
-.score-area {
-    font-size: 400%;
-    display: flex;
-}
-
 .player-score {
-    margin-left: 20%;
+    margin-left: 23%;
+    padding-right: 2%;
     flex: 1;
 }
 
 .computer-score {
-    margin-right: 21%;
+    margin-right: 23%;
+    padding-left: 2%;
 }
 
-.notice-area {
+.result {
     font-size: 300%;
-    text-align: center;
     margin-top: 2%;
+    text-align: center;
+    color: #05D0EB;
 }
 
-.game-area {
-    font-size: 300%;
-}
-
-.controls-area {
+.controls {
     text-align: center;
     padding: 2%;
 }
 
-.controls-area i {
-    padding: 3%;
+.controls i {
+    margin: 2.5%;
+    padding: 1.5%;
     font-size: 6em;
 }
 
-.controls-area i:hover {
+.controls i:hover {
     transform: scale(1.5);
+    cursor: pointer;
+    border: 2px solid #ff91a4;
+    border-radius: 50%;
 }
 
 footer {
