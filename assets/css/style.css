@@ -44,7 +44,7 @@ h1 {
     font-size: 200%;
 }
 
-.scoreboard {
+.scoreBoard {
     font-size: 350%;
     margin-top: 3%;
     padding: 2%;
@@ -53,24 +53,24 @@ h1 {
     color: #05D0EB;
 }
 
-.player-name {
+.playerName {
     float: left;
     margin-left: 15%;
     flex: 1;
 }
 
-.computer-name {
+.computerName {
     float: right;
     margin-right: 15%;
 }
 
-.player-score {
+.playerScore {
     margin-left: 23%;
     padding-right: 2%;
     flex: 1;
 }
 
-.computer-score {
+.computerScore {
     margin-right: 23%;
     padding-left: 2%;
 }
