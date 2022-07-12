@@ -54,25 +54,22 @@ h1 {
 }
 
 .playerName {
-    float: left;
     margin-left: 15%;
+    padding-right: 8%;
     flex: 1;
 }
 
 .computerName {
-    float: right;
     margin-right: 15%;
+    padding-left: 8%;
+}
+
+.scores {
+    margin: 0 10%;
 }
 
 .playerScore {
-    margin-left: 23%;
-    padding-right: 2%;
     flex: 1;
-}
-
-.computerScore {
-    margin-right: 23%;
-    padding-left: 2%;
 }
 
 .result {
