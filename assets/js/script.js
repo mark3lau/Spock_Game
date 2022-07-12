@@ -30,13 +30,40 @@ function getComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 5);
     return controls[randomNumber];
 }
-console.log(getComputerChoice);
 
-getComputerChoice();
-
-function game(userChoice) {
+function game(playerChoice) {
     const computerChoice = getComputerChoice();
-    console.log(computerChoice);
+    switch (playerChoice + computerChoice) {
+        case "rockscissors":
+        case "rocklizard":
+        case "paperrock":
+        case "paperspock":
+        case "scissorspaper":
+        case "scissorslizard":
+        case "lizardspock":
+        case "lizardpaper":
+            console.log("Player wins!");
+            break;
+        case "rockpaper":
+        case "rockspock":
+        case "paperscissors":
+        case "paperlizard":
+        case "scissorsspock":
+        case "scissorsrock":
+        case "lizardrock":
+        case "lizardscissors":
+        case "spockpaper":
+        case "spocklizard":
+            console.log("Computer wins!");
+            break;
+        case "rockrock":
+        case "paperpaper":
+        case "scissorsscissors":
+        case "lizardlizard":
+        case "spockspock":
+            console.log("It's a draw!");
+            break;
+    }
 }
 
 function main() {
