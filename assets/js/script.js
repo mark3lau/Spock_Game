@@ -28,15 +28,21 @@ function win(playerChoice, computerChoice) {
     playerScore++;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = `You win! ${convertWord(playerChoice)} beats ${convertWord(computerChoice)}`;
+    result_p.innerHTML = `You win 🎉! ${convertWord(playerChoice)} beats ${convertWord(computerChoice)}`;
 }
 
-function lose() {
-    console.log("lose");
+function lose(playerChoice, computerChoice) {
+    computerScore++;
+    playerScore_span.innerHTML = playerScore;
+    computerScore_span.innerHTML = computerScore;
+    result_p.innerHTML = `You lose 👎! ${convertWord(playerChoice)} loses to ${convertWord(computerChoice)}`;
 }
 
 function draw() {
-    console.log("draw");
+    playerScore++;
+    playerScore_span.innerHTML = playerScore;
+    computerScore_span.innerHTML = computerScore;
+    result_p.innerHTML = `You win! ${convertWord(playerChoice)} beats ${convertWord(computerChoice)}`;
 }
 
 function game(playerChoice) {
