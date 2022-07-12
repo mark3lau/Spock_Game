@@ -25,8 +25,18 @@ const scissors_div = document.getElementById("scissors");
 const lizard_div = document.getElementById("lizard");
 const spock_div = document.getElementById("spock");
 
+function getComputerChoice() {
+    const controls = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+    const randomNumber = Math.floor(Math.random() * 5);
+    return controls[randomNumber];
+}
+console.log(getComputerChoice);
+
+getComputerChoice();
+
 function game(userChoice) {
-    console.log("poop" + userChoice);
+    const computerChoice = getComputerChoice();
+    console.log(computerChoice);
 }
 
 function main() {
