@@ -38,11 +38,8 @@ function lose(playerChoice, computerChoice) {
     result_p.innerHTML = `You lose 👎! ${convertWord(playerChoice)} loses to ${convertWord(computerChoice)}`;
 }
 
-function draw() {
-    playerScore++;
-    playerScore_span.innerHTML = playerScore;
-    computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = `You win! ${convertWord(playerChoice)} beats ${convertWord(computerChoice)}`;
+function draw(playerChoice, computerChoice) {
+    result_p.innerHTML = `It's a draw 😐! ${convertWord(playerChoice)} is ${convertWord(computerChoice)}`;
 }
 
 function game(playerChoice) {
