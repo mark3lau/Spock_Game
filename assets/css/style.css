@@ -101,3 +101,10 @@ footer {
     border-top: 5px solid #ff91a4;
 }
 
+.win-green {
+    color:#90EE90;
+}
+
+.lose-red {
+    color: #f70d1a;
+}

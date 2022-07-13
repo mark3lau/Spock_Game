@@ -29,6 +29,8 @@ function win(playerChoice, computerChoice) {
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `You win 🎉! ${convertWord(playerChoice)} beats ${convertWord(computerChoice)}`;
+    playerScore_span.classList.add('win-green');
+    setTimeout(function() {playerScore_span.classList.remove('win-green')}, 250);
 }
 
 function lose(playerChoice, computerChoice) {
@@ -36,6 +38,8 @@ function lose(playerChoice, computerChoice) {
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `You lose 👎! ${convertWord(playerChoice)} loses to ${convertWord(computerChoice)}`;
+    computerScore_span.classList.add('lose-red');
+    setTimeout(function() {computerScore_span.classList.remove('lose-red')}, 250);
 }
 
 function draw(playerChoice, computerChoice) {
