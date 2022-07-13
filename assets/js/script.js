@@ -1,3 +1,11 @@
+let username;
+
+document.getElementById("submit").onclick = function() {
+    username = document.getElementById("name").value;
+    document.getElementById("playerName").innerHTML = username;
+    document.getElementById("landingPage").style.display = 'none';
+}
+
 let playerScore = 0;
 let computerScore = 0;
 const playerScore_span = document.getElementById("playerScore");

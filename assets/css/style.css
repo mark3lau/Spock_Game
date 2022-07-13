@@ -53,23 +53,20 @@ h1 {
     color: #05D0EB;
 }
 
-.playerName {
+#playerName {
     margin-left: 15%;
     padding-right: 8%;
     flex: 1;
 }
 
-.computerName {
+#computerName {
     margin-right: 15%;
     padding-left: 8%;
 }
 
 .scores {
-    margin: 0 10%;
-}
-
-.playerScore {
-    flex: 1;
+    font-size: 150%;
+    margin: 0 5%;
 }
 
 .result {
@@ -81,7 +78,7 @@ h1 {
 
 .controls {
     text-align: center;
-    padding: 2%;
+    padding: 2% 0 1% 0;
 }
 
 .controls i {
@@ -95,6 +92,13 @@ h1 {
     cursor: pointer;
     border: 2px solid #ff91a4;
     border-radius: 50%;
+}
+
+.message {
+    font-family: 'press start 2p', Helvetica, sans-serif;
+    text-align: center;
+    font-size: 250%;
+    padding-bottom: 3%;
 }
 
 footer {
