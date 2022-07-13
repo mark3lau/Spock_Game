@@ -1,6 +1,12 @@
+/**
+ * Dom content to load. 
+ * Hide the Game page and load Landing page 
+ */
+
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("gamePage").style.display = 'none';
     document.getElementById("landingPage").style.display = 'block';
+    document.getElementById("name").focus();
 })
 
 function loadGame() {
@@ -50,7 +56,7 @@ function convertWord(word) {
 }
 
 function win(playerChoice, computerChoice) {
-    playerScore++;
+    ++playerScore;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `You win 🎉! ${convertWord(playerChoice)} beats ${convertWord(computerChoice)}`;
@@ -59,7 +65,7 @@ function win(playerChoice, computerChoice) {
 }
 
 function lose(playerChoice, computerChoice) {
-    computerScore++;
+    ++computerScore;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `You lose 👎! ${convertWord(playerChoice)} loses to ${convertWord(computerChoice)}`;

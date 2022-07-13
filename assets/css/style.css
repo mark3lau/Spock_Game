@@ -8,6 +8,8 @@
     border: none;
 }
 
+/* Body styling and background effect */
+
 body {
     font-family: 'space grotesk', Helvetica, sans-serif;
     background-color: #232829;
@@ -21,6 +23,8 @@ body {
     background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
+/* Header and h1 styling */
+
 header {
     border-bottom: 5px solid #ff91a4;
 }
@@ -32,6 +36,8 @@ h1 {
     text-align: center;
     padding: 3%;
 }
+
+/* Landing page - rules and username input styling */
 
 .rules {
     text-align: center;
@@ -60,6 +66,10 @@ h1 {
     font-size: 200%;
 }
 
+/* Game page */
+
+/* Scoreboard section */
+
 .scoreBoard {
     font-size: 350%;
     margin-top: 3%;
@@ -83,7 +93,18 @@ h1 {
 .scores {
     font-size: 150%;
     margin: 0 5%;
+    border: 3px solid #05D0EB;
 }
+
+.win-green {
+    color:#90EE90;
+}
+
+.lose-red {
+    color: #f70d1a;
+}
+
+/* Result message */
 
 .result {
     font-size: 300%;
@@ -91,6 +112,8 @@ h1 {
     text-align: center;
     color: #05D0EB;
 }
+
+/* User controls area */
 
 .controls {
     text-align: center;
@@ -110,6 +133,8 @@ h1 {
     border-radius: 50%;
 }
 
+/* Message to user */
+
 .message {
     font-family: 'press start 2p', Helvetica, sans-serif;
     text-align: center;
@@ -117,15 +142,14 @@ h1 {
     padding-bottom: 3%;
 }
 
+/* Footer styling */
+
 footer {
     border-top: 5px solid #ff91a4;
     margin: 3% 0;
 }
 
-.win-green {
-    color:#90EE90;
-}
+/* Media queries */
 
-.lose-red {
-    color: #f70d1a;
-}
+/* For large to medium screen size from 1480px wide and down */
+
