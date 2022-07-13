@@ -1,9 +1,26 @@
-let username;
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("gamePage").style.display = 'none';
+    document.getElementById("landingPage").style.display = 'block';
+})
 
-document.getElementById("submit").onclick = function() {
+function loadGame() {
     username = document.getElementById("name").value;
     document.getElementById("playerName").innerHTML = username;
     document.getElementById("landingPage").style.display = 'none';
+    document.getElementById("gamePage").style.display = 'block';
+}
+
+    document.getElementById("name").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        loadGame () 
+    }
+})
+
+    document.getElementById("submit").onclick = function loadGame() {
+        username = document.getElementById("name").value;
+        document.getElementById("playerName").innerHTML = username;
+        document.getElementById("landingPage").style.display = 'none';
+        document.getElementById("gamePage").style.display = 'block';
 }
 
 let playerScore = 0;

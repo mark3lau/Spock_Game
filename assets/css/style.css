@@ -28,14 +28,30 @@ header {
 h1 {
     font-family: 'press start 2p', Helvetica, sans-serif;
     color: #ff91a4;
-    font-size: 400%;
+    font-size: 350%;
     text-align: center;
     padding: 3%;
 }
 
 .rules {
     text-align: center;
-    margin: 5%;
+    margin: 3%;
+}
+
+#name, #submit {
+    padding: 0.5%;
+    border: 3px solid #ff91a4;
+    font-family: 'press start 2p', Helvetica, sans-serif;
+    font-weight: bold;
+    color: #05D0EB;
+    background-color: rgba(0,0,0,0);
+    font-size: 60%;
+}
+
+#submit:hover {
+    cursor: pointer;
+    border: 3px solid #05D0EB;
+    color: #ff91a4;
 }
 
 .username {
@@ -90,7 +106,7 @@ h1 {
 .controls i:hover {
     transform: scale(1.5);
     cursor: pointer;
-    border: 2px solid #ff91a4;
+    border: 2px solid #05D0EB;
     border-radius: 50%;
 }
 
@@ -103,6 +119,7 @@ h1 {
 
 footer {
     border-top: 5px solid #ff91a4;
+    margin: 3% 0;
 }
 
 .win-green {
