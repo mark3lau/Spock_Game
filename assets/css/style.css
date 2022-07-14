@@ -96,7 +96,7 @@ h1 {
     font-size: 150%;
     margin: 0 5%;
     border: 3px solid #05D0EB;
-    padding: 1% 2%;
+    padding: 2% 4%;
     text-align: center;
 }
 
@@ -175,17 +175,78 @@ h1 {
 
 #name {
     font-size: 50%;
-    width: 80%;
+    width: 65%;
 }
 
 #submit {
-    font-size: 50%;
+    font-size: 60%;
     width: 30%;
+    padding: 2px;
+    margin: 4%;
 }
 
 footer {
+    width: 100%;
+}
+
+.scoreBoard {
+    font-size: 100%;
+    margin-top: 30px;
+    padding: 2%;
+    display: flex;
+    text-align: center;
+}
+
+#playerName {
+    font-size: 140%;
+    margin-left: 4%;
+    padding-right: 5%;
+    flex: 1;
+    margin-top: 10%;
+    line-height: 1%;
+}
+
+#computerName {
+    font-size: 140%;
+    margin-right: 4%;
+    padding-left: 5%;
+    flex: 1;
+    margin-top: 10%;
+    line-height: 1%;
+}
+
+.scores {
+    font-size: 150%;
+    margin: 0;
+    border: 2px solid #05D0EB;
+    padding: 2% 4%;
+    text-align: center;
+}
+
+.result {
+    font-size: 150%;
     margin: 10%;
-    border-width: 100%;
+}
+
+.controls {
+    margin-right: 3%;
+}
+
+.controls i {
+    margin: 3%;
+    padding: 2.5%;
+    font-size: 4em;
+}
+
+.controls i:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    border: 1px solid #05D0EB;
+    border-radius: 50%;
+}
+
+.message {
+    font-size: 100%;
 }
 
 }
