@@ -47,14 +47,6 @@ function getComputerChoice() {
     return controls[randomNumber];
 }
 
-function convertWord(word) {
-    if (word === "rock") return "Rock";
-    if (word === "paper") return "Paper";
-    if (word === "scissors") return "Scissors";
-    if (word === "lizard") return "Lizard";
-    return "Spock";
-}
-
 function win(playerChoice, computerChoice) {
     ++playerScore;
     playerScore_span.innerHTML = playerScore;
@@ -75,6 +67,14 @@ function lose(playerChoice, computerChoice) {
 
 function draw(playerChoice, computerChoice) {
     result_p.innerHTML = `It's a draw 😐! ${convertWord(playerChoice)} is ${convertWord(computerChoice)}`;
+}
+
+function convertWord(word) {
+    if (word === "rock") return "Rock";
+    if (word === "paper") return "Paper";
+    if (word === "scissors") return "Scissors";
+    if (word === "lizard") return "Lizard";
+    return "Spock";
 }
 
 function game(playerChoice) {
