@@ -44,6 +44,18 @@ h1 {
     margin: 3%;
 }
 
+#easyRules {
+    width: 400px;
+    height: 400px;
+    padding: 1%;
+}
+
+#hardRules {
+    width: 400px;
+    height: 400px;
+    padding: 1%;
+}
+
 #name, #submit {
     padding: 0.5%;
     border: 3px solid #ff91a4;
@@ -69,6 +81,26 @@ h1 {
 /* Game page */
 
 /* Scoreboard section */
+
+#levels {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 150%;
+    margin-top: 2%;
+    padding: 1%;
+}
+
+#easy, #hard {
+    font-size: 100%;
+    color: #ff91a4;
+    padding: 1%;
+    background: none;
+}
+
+#easy:hover, #hard:hover {
+    cursor: pointer;
+    border: 3px solid #05D0EB;
+}
 
 .scoreBoard {
     font-size: 350%;
