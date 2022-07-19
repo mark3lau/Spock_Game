@@ -99,31 +99,33 @@ const devil_span = document.getElementById("devil");
     return "Devil";
 };
 
-let easyClick = document.getElementById("easy").onclick;
-let hardClick = document.getElementById("hard").onclick;
+// let easyClick = button.document.getElementById("easy").addEventListener('click');
+// let hardClick = document.getElementById("hard").addEventListener('click');
 
 /**
  * Easy Game page - Lizard and Spock level 
  */
 
-function runGame() {
+function runGame(easyGame, hardGame) {
 
- if (easyClick) { 
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+            if (document.getElementById("easy").onclick) {
     
-    function easyGame() {
-    
-    document.getElementById("love").style.display = 'none';
-    document.getElementById("devil").style.display = 'none';
+        function easyGame() {
+        
+        document.getElementById("love").style.display = 'none';
+        document.getElementById("devil").style.display = 'none';
 
 /**
  * Generate random easy computer choice
  */
 
-    function getComputerChoiceEasy() {
-    const controls = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
-    const randomNumber = Math.floor(Math.random() * 5);
-    return controls[randomNumber];
-    };
+        function getComputerChoiceEasy() {
+        const controls = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+        const randomNumber = Math.floor(Math.random() * 5);
+        return controls[randomNumber];
+        };
 
 /**
  * Functions for win, lose and draw and 
@@ -196,11 +198,11 @@ function runGame() {
  * Hard Game page - Love and Devil level 
  */
 
-}} else { 
+    }} else { 
     
-    if (hardClick) {
+    if (document.getElementById("hard").onclick) {
 
-    function hardGame() {   
+        function hardGame() {   
     
         document.getElementById("love").style.display = 'block';
         document.getElementById("devil").style.display = 'block';
@@ -209,45 +211,45 @@ function runGame() {
  * Generate random computer choice
  */
 
-    function getComputerChoiceHard() {
-    const controls = ['rock', 'paper', 'scissors', 'lizard', 'spock', 'love', 'devil'];
-    const randomNumber = Math.floor(Math.random() * 7);
-    return controls[randomNumber];
-    };
+        function getComputerChoiceHard() {
+        const controls = ['rock', 'paper', 'scissors', 'lizard', 'spock', 'love', 'devil'];
+        const randomNumber = Math.floor(Math.random() * 7);
+        return controls[randomNumber];
+        };
 
 /**
  * Functions for win, lose and draw and 
  * their results
  */
 
-    function win(playerChoiceHard, computerChoiceHard) {
-    ++playerScore;
-    playerScore_span.innerHTML = playerScore;
-    computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = `You win 🎉! ${changeWord(playerChoiceHard)} beats ${changeWord(computerChoiceHard)}`;
-    playerScore_span.classList.add('win-green');
-    setTimeout(function() {playerScore_span.classList.remove('win-green')}, 250);
-    };
+        function win(playerChoiceHard, computerChoiceHard) {
+        ++playerScore;
+        playerScore_span.innerHTML = playerScore;
+        computerScore_span.innerHTML = computerScore;
+        result_p.innerHTML = `You win 🎉! ${changeWord(playerChoiceHard)} beats ${changeWord(computerChoiceHard)}`;
+        playerScore_span.classList.add('win-green');
+        setTimeout(function() {playerScore_span.classList.remove('win-green')}, 250);
+        };
 
-    function lose(playerChoiceHard, computerChoiceHard) {
-    ++computerScore;
-    playerScore_span.innerHTML = playerScore;
-    computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = `You lose 👎! ${changeWord(playerChoiceHard)} loses to ${changeWord(computerChoiceHard)}`;
-    computerScore_span.classList.add('lose-red');
-    setTimeout(function() {computerScore_span.classList.remove('lose-red')}, 250);
-    };
+        function lose(playerChoiceHard, computerChoiceHard) {
+        ++computerScore;
+        playerScore_span.innerHTML = playerScore;
+        computerScore_span.innerHTML = computerScore;
+        result_p.innerHTML = `You lose 👎! ${changeWord(playerChoiceHard)} loses to ${changeWord(computerChoiceHard)}`;
+        computerScore_span.classList.add('lose-red');
+        setTimeout(function() {computerScore_span.classList.remove('lose-red')}, 250);
+        };
 
-    function draw(playerChoiceHard, computerChoiceHard) {
-        result_p.innerHTML = `It's a draw 😐! ${changeWord(playerChoiceHard)} is ${changeWord(computerChoiceHard)}`;
-    };
+        function draw(playerChoiceHard, computerChoiceHard) {
+            result_p.innerHTML = `It's a draw 😐! ${changeWord(playerChoiceHard)} is ${changeWord(computerChoiceHard)}`;
+        };
 
 /**
  * Define the game results between
  * player choice and computer choice
  */
 
-    function game(playerChoiceHard) {
+        function game(playerChoiceHard) {
         const computerChoiceHard = getComputerChoiceHard();
         switch (playerChoiceHard + computerChoiceHard) {
         case "rockscissors":
@@ -302,7 +304,8 @@ function runGame() {
         case "devildevil":
             draw(playerChoiceHard, computerChoiceHard);
             break;
+        }};
     }
-};
-}
-}}}
+    }}
+    }
+        )}}
