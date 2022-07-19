@@ -47,48 +47,49 @@ const love_span = document.getElementById("love");
 const devil_span = document.getElementById("devil");
 
 /**
- * Generate random easy computer choice
+ * Add event listeners for
+ * player choices
  */
 
-function getComputerChoiceEasy() {
-    const controls = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
-    const randomNumber = Math.floor(Math.random() * 5);
-    return controls[randomNumber];
-};
-
-/**
- * Functions for win, lose and draw and 
- * their results
- */
-
-function win(playerChoiceEasy, computerChoiceEasy) {
-    ++playerScore;
-    playerScore_span.innerHTML = playerScore;
-    computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = `You win 🎉! ${changeWord(playerChoiceEasy)} beats ${changeWord(computerChoiceEasy)}`;
-    playerScore_span.classList.add('win-green');
-    setTimeout(function() {playerScore_span.classList.remove('win-green')}, 250);
-};
-
-function lose(playerChoiceEasy, computerChoiceEasy) {
-    ++computerScore;
-    playerScore_span.innerHTML = playerScore;
-    computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = `You lose 👎! ${changeWord(playerChoiceEasy)} loses to ${changeWord(computerChoiceEasy)}`;
-    computerScore_span.classList.add('lose-red');
-    setTimeout(function() {computerScore_span.classList.remove('lose-red')}, 250);
-};
-
-function draw(playerChoiceEasy, computerChoiceEasy) {
-    result_p.innerHTML = `It's a draw 😐! ${changeWord(playerChoiceEasy)} is ${changeWord(computerChoiceEasy)}`;
-};
+ function main() {
+    rock_span.addEventListener('click', function() {
+        game("rock");
+    });
+    
+    paper_span.addEventListener('click', function() {
+        game("paper");
+    });
+    
+    scissors_span.addEventListener('click', function() {
+        game("scissors");
+    });
+    
+    lizard_span.addEventListener('click', function() {
+        game("lizard");
+    });
+    
+    spock_span.addEventListener('click', function() {
+        game("spock");
+    });
+    
+    love_span.addEventListener('click', function() {
+        game("love");
+    })
+    
+    devil_span.addEventListener('click', function() {
+        game("devil");
+    })
+    
+    };
+    
+    main();
 
 /**
  * Change the choice word of the 
  * result display message
  */
 
-function changeWord(word) {
+ function changeWord(word) {
     if (word === "rock") return "Rock";
     if (word === "paper") return "Paper";
     if (word === "scissors") return "Scissors";
@@ -98,133 +99,157 @@ function changeWord(word) {
     return "Devil";
 };
 
-/**
- * Define the game results between
- * player choice and computer choice
- */
-
-function game(playerChoiceEasy) {
-    const computerChoiceEasy = getComputerChoiceEasy();
-    switch (playerChoiceEasy + computerChoiceEasy) {
-        case "rockscissors":
-        case "rocklizard":
-        case "paperrock":
-        case "paperspock":
-        case "scissorspaper":
-        case "scissorslizard":
-        case "lizardspock":
-        case "lizardpaper":
-            win(playerChoiceEasy, computerChoiceEasy);
-            break;
-        case "rockpaper":
-        case "rockspock":
-        case "paperscissors":
-        case "paperlizard":
-        case "scissorsspock":
-        case "scissorsrock":
-        case "lizardrock":
-        case "lizardscissors":
-        case "spockpaper":
-        case "spocklizard":
-            lose(playerChoiceEasy, computerChoiceEasy);
-            break;
-        case "rockrock":
-        case "paperpaper":
-        case "scissorsscissors":
-        case "lizardlizard":
-        case "spockspock":
-            draw(playerChoiceEasy, computerChoiceEasy);
-            break;
-    }
-};
+let easyClick = document.getElementById("easy").onclick;
+let hardClick = document.getElementById("hard").onclick;
 
 /**
- * Add event listeners for
- * player choices
+ * Easy Game page - Lizard and Spock level 
  */
 
-function main() {
-rock_span.addEventListener('click', function() {
-    game("rock");
-});
+function runGame() {
 
-paper_span.addEventListener('click', function() {
-    game("paper");
-});
-
-scissors_span.addEventListener('click', function() {
-    game("scissors");
-});
-
-lizard_span.addEventListener('click', function() {
-    game("lizard");
-});
-
-spock_span.addEventListener('click', function() {
-    game("spock");
-});
-
-love_span.addEventListener('click', function() {
-    game("love");
-})
-
-devil_span.addEventListener('click', function() {
-    game("devil");
-})
-
-};
-
-main();
+ if (easyClick) { 
+    
+    function easyGame() {
+    
+    document.getElementById("love").style.display = 'none';
+    document.getElementById("devil").style.display = 'none';
 
 /**
- * Love and Devil level - Game page
+ * Generate random easy computer choice
  */
 
-/**
- * Generate random computer choice
- */
-
- function getComputerChoiceHard() {
-    const controls = ['rock', 'paper', 'scissors', 'lizard', 'spock', 'love', 'devil'];
-    const randomNumber = Math.floor(Math.random() * 7);
+    function getComputerChoiceEasy() {
+    const controls = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+    const randomNumber = Math.floor(Math.random() * 5);
     return controls[randomNumber];
-};
+    };
 
 /**
  * Functions for win, lose and draw and 
  * their results
  */
 
- function win(playerChoiceHard, computerChoiceHard) {
+    function win(playerChoiceEasy, computerChoiceEasy) {
+        ++playerScore;
+        playerScore_span.innerHTML = playerScore;
+        computerScore_span.innerHTML = computerScore;
+        result_p.innerHTML = `You win 🎉! ${changeWord(playerChoiceEasy)} beats ${changeWord(computerChoiceEasy)}`;
+        playerScore_span.classList.add('win-green');
+        setTimeout(function() {playerScore_span.classList.remove('win-green')}, 250);
+    };
+
+    function lose(playerChoiceEasy, computerChoiceEasy) {
+        ++computerScore;
+        playerScore_span.innerHTML = playerScore;
+        computerScore_span.innerHTML = computerScore;
+        result_p.innerHTML = `You lose 👎! ${changeWord(playerChoiceEasy)} loses to ${changeWord(computerChoiceEasy)}`;
+        computerScore_span.classList.add('lose-red');
+        setTimeout(function() {computerScore_span.classList.remove('lose-red')}, 250);
+    };
+
+    function draw(playerChoiceEasy, computerChoiceEasy) {
+        result_p.innerHTML = `It's a draw 😐! ${changeWord(playerChoiceEasy)} is ${changeWord(computerChoiceEasy)}`;
+    };
+    
+/**
+ * Define the game results between
+ * player choice and computer choice
+ */
+
+    function game(playerChoiceEasy) {
+        const computerChoiceEasy = getComputerChoiceEasy();
+        switch (playerChoiceEasy + computerChoiceEasy) {
+            case "rockscissors":
+            case "rocklizard":
+            case "paperrock":
+            case "paperspock":
+            case "scissorspaper":
+            case "scissorslizard":
+            case "lizardspock":
+            case "lizardpaper":
+            win(playerChoiceEasy, computerChoiceEasy);
+            break;
+            case "rockpaper":
+            case "rockspock":
+            case "paperscissors":
+            case "paperlizard":
+            case "scissorsspock":
+            case "scissorsrock":
+            case "lizardrock":
+            case "lizardscissors":
+            case "spockpaper":
+            case "spocklizard":
+            lose(playerChoiceEasy, computerChoiceEasy);
+            break;
+            case "rockrock":
+            case "paperpaper":
+            case "scissorsscissors":
+            case "lizardlizard":
+            case "spockspock":
+            draw(playerChoiceEasy, computerChoiceEasy);
+            break;
+        }
+    };
+
+/**
+ * Hard Game page - Love and Devil level 
+ */
+
+}} else { 
+    
+    if (hardClick) {
+
+    function hardGame() {   
+    
+        document.getElementById("love").style.display = 'block';
+        document.getElementById("devil").style.display = 'block';
+
+/**
+ * Generate random computer choice
+ */
+
+    function getComputerChoiceHard() {
+    const controls = ['rock', 'paper', 'scissors', 'lizard', 'spock', 'love', 'devil'];
+    const randomNumber = Math.floor(Math.random() * 7);
+    return controls[randomNumber];
+    };
+
+/**
+ * Functions for win, lose and draw and 
+ * their results
+ */
+
+    function win(playerChoiceHard, computerChoiceHard) {
     ++playerScore;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `You win 🎉! ${changeWord(playerChoiceHard)} beats ${changeWord(computerChoiceHard)}`;
     playerScore_span.classList.add('win-green');
     setTimeout(function() {playerScore_span.classList.remove('win-green')}, 250);
-};
+    };
 
-function lose(playerChoiceHard, computerChoiceHard) {
+    function lose(playerChoiceHard, computerChoiceHard) {
     ++computerScore;
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `You lose 👎! ${changeWord(playerChoiceHard)} loses to ${changeWord(computerChoiceHard)}`;
     computerScore_span.classList.add('lose-red');
     setTimeout(function() {computerScore_span.classList.remove('lose-red')}, 250);
-};
+    };
 
-function draw(playerChoiceHard, computerChoiceHard) {
-    result_p.innerHTML = `It's a draw 😐! ${changeWord(playerChoiceHard)} is ${changeWord(computerChoiceHard)}`;
-};
+    function draw(playerChoiceHard, computerChoiceHard) {
+        result_p.innerHTML = `It's a draw 😐! ${changeWord(playerChoiceHard)} is ${changeWord(computerChoiceHard)}`;
+    };
 
 /**
  * Define the game results between
  * player choice and computer choice
  */
 
- function game(playerChoiceHard) {
-    const computerChoiceHard = getComputerChoiceHard();
-    switch (playerChoiceHard + computerChoiceHard) {
+    function game(playerChoiceHard) {
+        const computerChoiceHard = getComputerChoiceHard();
+        switch (playerChoiceHard + computerChoiceHard) {
         case "rockscissors":
         case "rocklizard":
         case "rockdevil":
@@ -279,5 +304,5 @@ function draw(playerChoiceHard, computerChoiceHard) {
             break;
     }
 };
-
-
+}
+}}}
