@@ -7,9 +7,10 @@
 document.addEventListener("DOMContentLoaded", initializeGame);
 
 function initializeGame() {
-    document.getElementById("gamePage").style.display = 'none';
-    document.getElementById("landingPage").style.display = 'block';
+    document.getElementById("gamePage").style.display = "none";
+    document.getElementById("landingPage").style.display = "block";
     document.getElementById("name").focus();
+    document.getElementById("submit").addEventListener("click", loadGame)
     document.getElementById("name").addEventListener("keydown", function(event) {
         if (event.key === "Enter") {
             loadGame(); 
@@ -19,8 +20,8 @@ function initializeGame() {
 function loadGame() {
     let username = document.getElementById("name").value;
     document.getElementById("playerName").innerHTML = username;
-    document.getElementById("landingPage").style.display = 'none';
-    document.getElementById("gamePage").style.display = 'block';
+    document.getElementById("landingPage").style.display = "none";
+    document.getElementById("gamePage").style.display = "block'";
     main();
 };
 
@@ -45,8 +46,8 @@ let beepWin = new Audio ("assets/sounds/win_mixkit-retro-game-notification-212.w
 let beepLose = new Audio ("assets/sounds/lose_mixkit-retro-arcade-game-over-470.wav");
             beep.play();
 
-const controlsEasy = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
-const controlsHard = ['rock', 'paper', 'scissors', 'lizard', 'spock', 'love', 'devil'];
+const controlsEasy = ["rock", "paper", "scissors", "lizard", "spock"];
+const controlsHard = ["rock", "paper", "scissors", "lizard", "spock", "love", "devil"];
 
 /**
  * Add event listeners for
@@ -54,31 +55,31 @@ const controlsHard = ['rock', 'paper', 'scissors', 'lizard', 'spock', 'love', 'd
  */
 
 function main() {
-    rock_span.addEventListener('click', function() {
+    rock_span.addEventListener("click", function() {
         game("rock");
     });
     
-    paper_span.addEventListener('click', function() {
+    paper_span.addEventListener("click", function() {
         game("paper");
     });
     
-    scissors_span.addEventListener('click', function() {
+    scissors_span.addEventListener("click", function() {
         game("scissors");
     });
     
-    lizard_span.addEventListener('click', function() {
+    lizard_span.addEventListener("click", function() {
         game("lizard");
     });
     
-    spock_span.addEventListener('click', function() {
+    spock_span.addEventListener("click", function() {
         game("spock");
     });
     
-    love_span.addEventListener('click', function() {
+    love_span.addEventListener("click", function() {
         game("love");
     })
     
-    devil_span.addEventListener('click', function() {
+    devil_span.addEventListener("click", function() {
         game("devil");
     })
     
@@ -103,18 +104,18 @@ function changeWord(word) {
 // let hardClick = document.getElementById("hard").addEventListener('click');
     
         
-        document.getElementById("love").style.display = 'none';
-        document.getElementById("devil").style.display = 'none';
+        document.getElementById("love").style.display = "none";
+        document.getElementById("devil").style.display = "none";
 
-        document.getElementById("love").style.display = 'block';
-        document.getElementById("devil").style.display = 'block';
+        document.getElementById("love").style.display = "block";
+        document.getElementById("devil").style.display = "block";
 
 /**
  * Generate random easy computer choice
  */
 
 function getComputerChoice() {
-    const controls = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+    const controls = ["rock", "paper", "scissors", "lizard", "spock"];
     const randomNumber = Math.floor(Math.random() * controls.length);
     return controls[randomNumber];
 };
@@ -129,8 +130,8 @@ function win(playerChoice, computerChoice) {
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `You win 🎉! ${changeWord(playerChoice)} beats ${changeWord(computerChoice)}`;
-    playerScore_span.classList.add('win-green');
-    setTimeout(function() {playerScore_span.classList.remove('win-green')}, 250);
+    playerScore_span.classList.add("win-green");
+    setTimeout(function() {playerScore_span.classList.remove("win-green")}, 250);
 };
 
 function lose(playerChoice, computerChoice) {
@@ -138,8 +139,8 @@ function lose(playerChoice, computerChoice) {
     playerScore_span.innerHTML = playerScore;
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `You lose 👎! ${changeWord(playerChoice)} loses to ${changeWord(computerChoice)}`;
-    computerScore_span.classList.add('lose-red');
-    setTimeout(function() {computerScore_span.classList.remove('lose-red')}, 250);
+    computerScore_span.classList.add("lose-red");
+    setTimeout(function() {computerScore_span.classList.remove("lose-red")}, 250);
 };
 
 function draw(playerChoice, computerChoice) {
