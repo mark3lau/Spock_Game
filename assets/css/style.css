@@ -41,7 +41,7 @@ h1 {
 
 .rules {
     text-align: center;
-    margin: 3%;
+    margin: 2%;
 }
 
 #easyRules {
@@ -56,17 +56,28 @@ h1 {
     padding: 1%;
 }
 
-#name, #submit {
+#levelsLabel {
+    font-family: 'press start 2p', Helvetica, sans-serif;
+    text-align: center;
+    font-size: 150%;
+    padding: 1%;
+}
+
+#inputName, #easySubmit, #hardSubmit {
     padding: 0.5%;
     border: 3px solid #ff91a4;
     font-family: 'press start 2p', Helvetica, sans-serif;
     font-weight: bold;
     color: #05D0EB;
     background-color: rgba(0,0,0,0);
-    font-size: 60%;
+    font-size: 100%;
 }
 
-#submit:hover {
+#levelsChoices {
+    margin-left: 36%;
+}
+
+#easySubmit:hover, #hardSubmit:hover {
     cursor: pointer;
     border: 3px solid #05D0EB;
     color: #ff91a4;
@@ -75,20 +86,13 @@ h1 {
 .username {
     font-family: 'press start 2p', Helvetica, sans-serif;
     text-align: center;
-    font-size: 200%;
+    font-size: 150%;
+    padding: 1%;
 }
 
 /* Game page */
 
 /* Scoreboard section */
-
-#levels {
-    text-align: center;
-    font-weight: bolder;
-    font-size: 150%;
-    margin-top: 2%;
-    padding: 1%;
-}
 
 #easy, #hard {
     font-size: 100%;

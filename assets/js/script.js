@@ -4,32 +4,44 @@
  * until submit has been entered or clicked
  */
 
-document.addEventListener("DOMContentLoaded", initializeGame);
-
-function initializeGame() {
+document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("gamePage").style.display = "none";
     document.getElementById("landingPage").style.display = "block";
-    document.getElementById("name").focus();
-    document.getElementById("submit").addEventListener("click", loadGame)
-    document.getElementById("name").addEventListener("keydown", function(event) {
-        if (event.key === "Enter") {
-            loadGame(); 
-        }
-    });
+    document.getElementById("inputName").focus();
+    let easySubmit = document.getElementById("easySubmit").addEventListener("click", loadEasyGame);
+    let hardSubmit = document.getElementById("hardSubmit").addEventListener("click", loadHardGame);
+    let buttons = document.getElementsByTagName("button");
+    for (let button of buttons) {
+    if (easySubmit) {
+        loadEasyGame();
+    } else {
+        loadHardGame();
+    }
+}});
 
-function loadGame() {
-    let username = document.getElementById("name").value;
+function loadEasyGame() {
+    let username = document.getElementById("inputName").value;
     document.getElementById("playerName").innerHTML = username;
     document.getElementById("landingPage").style.display = "none";
-    document.getElementById("gamePage").style.display = "block'";
+    document.getElementById("gamePage").style.display = "block";
+    document.getElementById("love").style.display = "none";
+    document.getElementById("devil").style.display = "none";
     main();
 };
 
-/** Cached the DOM */
+function loadHardGame() {
+    let username = document.getElementById("inputName").value;
+    document.getElementById("playerName").innerHTML = username;
+    document.getElementById("landingPage").style.display = "none";
+    document.getElementById("gamePage").style.display = "block";
+    document.getElementById("love").style.display = "block";
+    document.getElementById("devil").style.display = "block";
+    main();
+};
 
 let playerScore = 0;
 let computerScore = 0;
-// let difficultyLevel = 'easy'
+// let difficultyLevel = "easy"; 
 let playerScore_span = document.getElementById("playerScore");
 let computerScore_span = document.getElementById("computerScore");
 let result_p = document.querySelector(".result > p");
@@ -40,14 +52,13 @@ let lizard_span = document.getElementById("lizard");
 let spock_span = document.getElementById("spock");
 let love_span = document.getElementById("love");
 let devil_span = document.getElementById("devil");
-
 let beepWin = new Audio ("assets/sounds/win_mixkit-retro-game-notification-212.wav")
-            beep.play();
+    beep.play();
 let beepLose = new Audio ("assets/sounds/lose_mixkit-retro-arcade-game-over-470.wav");
-            beep.play();
+    beep.play();
 
-const controlsEasy = ["rock", "paper", "scissors", "lizard", "spock"];
-const controlsHard = ["rock", "paper", "scissors", "lizard", "spock", "love", "devil"];
+let controlsEasy = ["rock", "paper", "scissors", "lizard", "spock"];
+let controlsHard = ["rock", "paper", "scissors", "lizard", "spock", "love", "devil"];
 
 /**
  * Add event listeners for
@@ -82,8 +93,7 @@ function main() {
     devil_span.addEventListener("click", function() {
         game("devil");
     })
-    
-    };
+};
 
 /**
  * Change the choice word of the 
@@ -100,24 +110,19 @@ function changeWord(word) {
     return "Devil";
 };
 
-// let easyClick = button.document.getElementById("easy").addEventListener('click');
-// let hardClick = document.getElementById("hard").addEventListener('click');
-    
-        
-        document.getElementById("love").style.display = "none";
-        document.getElementById("devil").style.display = "none";
-
-        document.getElementById("love").style.display = "block";
-        document.getElementById("devil").style.display = "block";
-
 /**
- * Generate random easy computer choice
+ * Generate random computer choice
  */
 
 function getComputerChoice() {
-    const controls = ["rock", "paper", "scissors", "lizard", "spock"];
-    const randomNumber = Math.floor(Math.random() * controls.length);
-    return controls[randomNumber];
+    if (difficultyLevel === easy) {
+        let controlsEasy;
+        const randomNumber = Math.floor(Math.random() * controlsEasy.length);
+        return controlsEasy[randomNumber];
+    } else (difficultyLevel === hard);
+        let controlsHard;
+        const randomNumber = Math.floor(Math.random() * controlsHard.length);
+        return controlsHard[randomNumber];
 };
 
 /**
@@ -207,5 +212,5 @@ function game(playerChoice) {
     case "devildevil":
         draw(playerChoice, computerChoice);
         break;
-    }}; 
-}
+    }
+}; 
