@@ -11,17 +11,20 @@ To understand the rules of the Game of Spock and to try and beat the Computer in
 
 ### **Acceptance criteria:**
 The landing page will include clear instructions to the rules of the Game of Spock.
-A user will have to input a username before they can progress to the game itself.
+An input box for the user to choose a username before they progress to the game itself.
 The chosen username will be implemented on the game page as soon as the user submits the name.
 The user can choose between two different levels of difficulty, whereby the easy level has five options to choose from, and the hard level has seven options to choose from.
 When the user chooses an option, a result message will display immediately to inform the user as to whether the result is a win, lose or draw, and the scoreboard will update immediately depending on the result.
-When the user chooses and option and the score updates, there will be an acknowledgement of the choice chosen and the score updating using a visual display of colour and/or audio.
 
 ### **Measurement of success:**
-A Home page that explains to the user what the site is about in brief, clear steps.
+A landing page with clear instructions explaining to the user before they get onto the game page what the rules of the game are. 
+A simple input section for the user to input their username on the landing page.
+The chosen username to be instantly implemented onto the game page and for the user to be taken there directly having clicked the submit button.
+
 A registration form that allows users to complete all mandatory fields and be directed to an acknowledgement page.
 A tennis courts page that includes brief descriptions of the tennis court with a link to the website, contact information and a google map of the location.
 A fully functioning fixed header and social media links in the footer that are fully responsive to medium and small screen widths.
+When the user chooses and option and the score updates, there will be an acknowledgement of the choice chosen and the score updating using a visual display of colour and/or audio.
 <hr>
 
 ## <u>3. Features</u>
