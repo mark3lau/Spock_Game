@@ -139,6 +139,8 @@ function runGame(easyGame, hardGame) {
         result_p.innerHTML = `You win 🎉! ${changeWord(playerChoiceEasy)} beats ${changeWord(computerChoiceEasy)}`;
         playerScore_span.classList.add('win-green');
         setTimeout(function() {playerScore_span.classList.remove('win-green')}, 250);
+        let beep = new Audio ("assets/sounds/win_mixkit-retro-game-notification-212.wav")
+            beep.play();
     };
 
     function lose(playerChoiceEasy, computerChoiceEasy) {
@@ -148,6 +150,8 @@ function runGame(easyGame, hardGame) {
         result_p.innerHTML = `You lose 👎! ${changeWord(playerChoiceEasy)} loses to ${changeWord(computerChoiceEasy)}`;
         computerScore_span.classList.add('lose-red');
         setTimeout(function() {computerScore_span.classList.remove('lose-red')}, 250);
+        let beep = new Audio ("assets/sounds/lose_mixkit-retro-arcade-game-over-470.wav");
+            beep.play();
     };
 
     function draw(playerChoiceEasy, computerChoiceEasy) {
@@ -229,6 +233,8 @@ function runGame(easyGame, hardGame) {
         result_p.innerHTML = `You win 🎉! ${changeWord(playerChoiceHard)} beats ${changeWord(computerChoiceHard)}`;
         playerScore_span.classList.add('win-green');
         setTimeout(function() {playerScore_span.classList.remove('win-green')}, 250);
+        let beep = new Audio ("assets/sounds/win_mixkit-retro-game-notification-212.wav")
+            beep.play();
         };
 
         function lose(playerChoiceHard, computerChoiceHard) {
@@ -238,6 +244,8 @@ function runGame(easyGame, hardGame) {
         result_p.innerHTML = `You lose 👎! ${changeWord(playerChoiceHard)} loses to ${changeWord(computerChoiceHard)}`;
         computerScore_span.classList.add('lose-red');
         setTimeout(function() {computerScore_span.classList.remove('lose-red')}, 250);
+        let beep = new Audio ("assets/sounds/lose_mixkit-retro-arcade-game-over-470.wav");
+            beep.play();
         };
 
         function draw(playerChoiceHard, computerChoiceHard) {

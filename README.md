@@ -1,21 +1,21 @@
 # **GAME OF SPOCK**
 
 ## <u>1. Introduction</u>
-My first project with Code Institute was to create a static front-end site to present useful information to users using HTML and CSS. London Tennis Club is a site that looks to connect keen tennis players of all abilities, living in London, so that they can play tennis whenever and wherever suits them and make new friends and socialise. The site is targeted towards people who want to play tennis but are struggling to find players within their current social group that are free and available at the same time as them. The site also provides information on public tennis courts in North, East, South and West of London. 
+The objective of this project was to create an interactive front-end site that would respond to a user's actions using Javascript, HTML and CSS. Game of Spock is an extension of the popular Rock, Paper, Scissors game that the user can play against the computer. The difference with the Game of Spock is that it has four extra options: Lizard, Spock, Love and Devil. Lizard and Spock are game options that were made popular by the TV programme 'The Big Bang Theory' and form the 'Easy Spock' level of the game with five options to choose from, and the Love and Devil options for the 'Hard Devil' level to the game where there are seven options to choose from. The site is targeted towards players who want to play an extended version of the traditional Rock, Paper, Scissors game and play online against the Computer. 
 <hr>
 
 ## <u>2. User Stories</u>
-As a tennis player in London, I want to find tennis players of similar ability near me so that we can play tennis at a time and day that suits us both.
+As a user who wants to learn and play an extension of the Rock, Paper, Scissors game, I want to navigate the game page with minimum effort and easily understand how to play the game from the instructions.
 ### **End user goal:** 
-Find tennis players near me to play tennis at a time and day that suits us both.
-### **End business goal:** 
-To connect tennis players across London from different social circles to play tennis.
+To understand the rules of the Game of Spock and to try and beat the Computer in the Game of Spock with a higher score.
 
 ### **Acceptance criteria:**
-Home page will include information on what the website is about.
-A user cannot complete the form without completing all mandatory fields. 
-Users are directed to an acknowledgement page after completing the form.
-Information on tennis courts will include links to the website and a google map of the location.
+The landing page will include clear instructions to the rules of the Game of Spock.
+A user will have to input a username before they can progress to the game itself.
+The chosen username will be implemented on the game page as soon as the user submits the name.
+The user can choose between two different levels of difficulty, whereby the easy level has five options to choose from, and the hard level has seven options to choose from.
+When the user chooses an option, a result message will display immediately to inform the user as to whether the result is a win, lose or draw, and the scoreboard will update immediately depending on the result.
+When the user chooses and option and the score updates, there will be an acknowledgement of the choice chosen and the score updating using a visual display of colour and/or audio.
 
 ### **Measurement of success:**
 A Home page that explains to the user what the site is about in brief, clear steps.
