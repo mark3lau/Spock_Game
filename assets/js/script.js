@@ -114,7 +114,7 @@ function changeWord(word) {
  * Generate random computer choice
  */
 
-function getComputerChoice() {
+function getComputerChoice(loadEasyGame, loadHardGame) {
     if (loadEasyGame) {
         const randomNumber = Math.floor(Math.random() * controlsEasy.length);
         return controlsEasy[randomNumber];
