@@ -8,16 +8,19 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("gamePage").style.display = "none";
     document.getElementById("landingPage").style.display = "block";
     document.getElementById("inputName").focus();
-    let easySubmit = document.getElementById("easySubmit").addEventListener("click", loadEasyGame);
-    let hardSubmit = document.getElementById("hardSubmit").addEventListener("click", loadHardGame);
-    let buttons = document.getElementsByTagName("button");
-    for (let button of buttons) {
-    if (easySubmit) {
+});
+
+let easySubmit = document.getElementById("easySubmit").addEventListener("click", loadEasyGame);
+let hardSubmit = document.getElementById("hardSubmit").addEventListener("click", loadHardGame);
+let buttons = document.getElementsByTagName("button");
+
+for (let button of buttons) {
+if (easySubmit) {
         loadEasyGame();
     } else {
         loadHardGame();
     }
-}});
+};
 
 function loadEasyGame() {
     let username = document.getElementById("inputName").value;
@@ -26,7 +29,6 @@ function loadEasyGame() {
     document.getElementById("gamePage").style.display = "block";
     document.getElementById("love").style.display = "none";
     document.getElementById("devil").style.display = "none";
-    main();
 };
 
 function loadHardGame() {
@@ -36,12 +38,10 @@ function loadHardGame() {
     document.getElementById("gamePage").style.display = "block";
     document.getElementById("love").style.display = "block";
     document.getElementById("devil").style.display = "block";
-    main();
 };
 
 let playerScore = 0;
 let computerScore = 0;
-// let difficultyLevel = "easy"; 
 let playerScore_span = document.getElementById("playerScore");
 let computerScore_span = document.getElementById("computerScore");
 let result_p = document.querySelector(".result > p");
@@ -52,10 +52,8 @@ let lizard_span = document.getElementById("lizard");
 let spock_span = document.getElementById("spock");
 let love_span = document.getElementById("love");
 let devil_span = document.getElementById("devil");
-let beepWin = new Audio ("assets/sounds/win_mixkit-retro-game-notification-212.wav")
-    beep.play();
+let beepWin = new Audio ("assets/sounds/win_mixkit-retro-game-notification-212.wav");
 let beepLose = new Audio ("assets/sounds/lose_mixkit-retro-arcade-game-over-470.wav");
-    beep.play();
 
 let controlsEasy = ["rock", "paper", "scissors", "lizard", "spock"];
 let controlsHard = ["rock", "paper", "scissors", "lizard", "spock", "love", "devil"];
@@ -95,6 +93,8 @@ function main() {
     })
 };
 
+main();
+
 /**
  * Change the choice word of the 
  * result display message
@@ -115,12 +115,10 @@ function changeWord(word) {
  */
 
 function getComputerChoice() {
-    if (difficultyLevel === easy) {
-        let controlsEasy;
+    if (loadEasyGame) {
         const randomNumber = Math.floor(Math.random() * controlsEasy.length);
         return controlsEasy[randomNumber];
-    } else (difficultyLevel === hard);
-        let controlsHard;
+    } else (loadHardGame);
         const randomNumber = Math.floor(Math.random() * controlsHard.length);
         return controlsHard[randomNumber];
 };
@@ -137,6 +135,7 @@ function win(playerChoice, computerChoice) {
     result_p.innerHTML = `You win 🎉! ${changeWord(playerChoice)} beats ${changeWord(computerChoice)}`;
     playerScore_span.classList.add("win-green");
     setTimeout(function() {playerScore_span.classList.remove("win-green")}, 250);
+    beepWin.play();
 };
 
 function lose(playerChoice, computerChoice) {
@@ -146,6 +145,7 @@ function lose(playerChoice, computerChoice) {
     result_p.innerHTML = `You lose 👎! ${changeWord(playerChoice)} loses to ${changeWord(computerChoice)}`;
     computerScore_span.classList.add("lose-red");
     setTimeout(function() {computerScore_span.classList.remove("lose-red")}, 250);
+    beepLose.play();
 };
 
 function draw(playerChoice, computerChoice) {
