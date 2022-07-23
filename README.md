@@ -80,11 +80,11 @@ To add a timer element to the game. This could be achieved by either adding a co
 <hr>
 
 ## <u>5. Typography and color scheme</u>
-I chose a dark background and a light pink colour scheme. I wanted to associate the colour scheme to Star Trek and the acknowledgement of Spock as being a main part of the game. The dark background has an added "galaxy/space" effect with tiny specks of white light to represent distant galaxies and the night sky. The light pink is a nice contrast to the dark background and makes the text legible. The main font is "press start 2p" which is reminiscent of the 1990s arcade games, this is only used for the game title and text that are large enough so that it's easy to read. For scoreboard text and messages this is in "space grotesk" font which is easier to read for the user and keeps with the "space" theme.
+I chose a dark background and a light pink colour scheme. I wanted to associate the colour scheme to Star Trek and the acknowledgement of Spock as being a main part of the game. The dark background has an added "galaxy/space" effect with tiny specks of white light to represent distant galaxies and the night sky. The light pink is a nice contrast to the dark background and makes the text legible. There is also a light blue colour that's used that gives an extra layer of aesthetics to the site and again is very legible against the dark background. The main font is "press start 2p" which is reminiscent of the 1990s arcade games, this is only used for the game title and text that are large enough so that it's easy to read. For scoreboard text and messages this is in "space grotesk" font which is easier to read for the user and keeps with the "space" theme.
 <hr>
 
 ## <u>6. Wireframes</u>
-Wireframes were created using Balsamiq to outline what the site would look like in desktop and mobile screen wdiths. 
+Wireframes were created using Balsamiq to outline what the site would look like, from the layout of the Landing page to the Game page and updating scoreboard and results messages. I've also outlined the layout for desktop and mobile screen widths.
 
 #### **Large and medium screen size**
 
@@ -109,38 +109,31 @@ Wireframes were created using Balsamiq to outline what the site would look like 
 <hr>
 
 ## <u>7. Technology</u>
-HTML and CSS.
+HTML, CSS and vanilla JavaScript.
 <hr>
 
 ## <u>8. Testing</u>
 
    ### **Code validation**
-   HTML and CSS. A few errors were found when the codes were put through the [W3C validator](https://validator.w3.org/) for HTML and [Jigsaw validator](https://jigsaw.w3.org/css-validator/) for CSS that were easily fixed, these include certain property values that were incorrect and/or irrelevant.
-   
+   HTML and CSS. No errors were found when the codes were put through the [W3C validator](https://validator.w3.org/) for HTML and [Jigsaw validator](https://jigsaw.w3.org/css-validator/) for CSS.
+
+   JavaScript.
+
    ### **Test cases (user story based with screenshots)**
 
    #### **Desktop**
 
-   ##### Home page
-   As the user is on the Home page, the user is shown a fixed header with a navigation bar, and a hero image that's stretched across the full width of the page with a cover text on top of the hero image. It's followed by a How it Works section describing the four steps of the process and a footer containing five social media links to Facebook, Instagram, Twitter, YouTube and LinkedIn. Hovering over each of these links, the icons will increase in size to show the user that it has been selected. Clicking each of these social media links will open the home page of the social media page on a separate page in a new tab. The footer links and actions apply to all four pages of the site.
-   At the navigation bar in the top right corner, as the user hovers over the links, a solid green line will appear over the selected link. Clicking on the Join Us link will take the user to the Join Us page. 
+   ##### Landing page
+   As the user is on the landing page, the user is shown the game title in the header, and two images underneath with the rules of the game. There is a message that informs the user to enter a username in a text box, where the pointer is focused on the text box already as the landing page loads. The user is also presented with two options below to choose a difficulty level for the game, Easy Spock and Hard Devil. The user must enter a username and choose a level in order to progress to the game page.
 
    ![nav-bar-highlight](docs/screenshots/home-button-highlight.png "Nav bar highlight")
 
    ![social-media-link-highlight](docs/screenshots/twitter-highlight.png "Social media link highlight")
 
-   ##### Join Us page
-   On the Join Us page, the user is greeted with a registration form. When the user types in their information in the text boxes but clicks Join without giving an input in all boxes, an error message "Please fill out this field" will appear. An error message "Please select one of these options" will also appear if the user clicks Join and no selection has been given for the Gender and/or the Tennis Ability fields. In the Date of Birth field, clicking on the box to the right of the field will open up a calendar that allows the user to choose a date. If information has been added to the fields and the user clicks the Reset button, this will reset all fields to blank.
+   ##### Game page
+   When the user gets to the game page, the username that was typed into the text box on the landing page will appear on the left side of the screen. In between the username and computer name, there is a scoreboard that indicates the scores for the player and the computer. Underneath the scoreboard is a "Ready?" message, the choices the user needs to make which are represented as icons, and another message to promt the user to make the first move to start the game. When the user hovers over the icons, the icons will "pop" out and is highlighted with a blue border. When the user clicks on a choice, the game starts immediately and the score will automatically update and the results message will appear to show the user whether they have won that round or not. If the user has won a round, the user's score in the scoreboard will light up green. If the user has lost the round, the computer's score in the scoreboard will light up red. If it's a draw, it will only be indicated through the results message.
 
    ![join-us-error-message](docs/screenshots/join-us-error-message.png "Join us page error message")
-
-   ##### Thank You page
-   Once the user has input information into all fields and clicks Join in the Join Us page, they will be taken to a Thank You page and presented with a text box confirming to the user that they have successfully registered. The fixed header and footer with social media links are located at the top and bottom of the page as per other pages. From here, clicking on the London Tennis Courts page will take the user to a new page.
-
-   ![thank-you-page](docs/screenshots/thank-you-page.png "Thank you page")
-
-   ##### London Tennis Courts page
-   On the Tennis Courts page, the user is presented with 4 sections with information on tennis courts in North, East, South and West London. Each section has a google map towards the right that is fully responsive with Zoom in and out options, and clickable options for Reviews, Directions and to view a larger map. Clicking any of these three options will open up the page in a new tab. Each section also has a website link which when clicked, will open the page in a new tab. Clicking on the tennis ball image in the top left of the page will take the user back to the Home page, this works for all four pages for the user.
 
    #### **Mobile** 
    Within a screensize width of 390px, the tennis ball home button in the header disappears on all pages. The navigation bar is pushed to the top left of the screen. On the Home page the four steps in the How it Works section are stacked on top of each other. In the London tennis courts section the maps are stacked below their corresponding text information. All links and icons work as they did for the desktop width.

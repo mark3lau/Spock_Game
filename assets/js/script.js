@@ -36,8 +36,8 @@ function loadHardGame() {
     document.getElementById("playerName").innerHTML = username;
     document.getElementById("landingPage").style.display = "none";
     document.getElementById("gamePage").style.display = "block";
-    document.getElementById("love").style.display = "block";
-    document.getElementById("devil").style.display = "block";
+    document.getElementById("love").style.display = "inline";
+    document.getElementById("devil").style.display = "inline";
 };
 
 let playerScore = 0;
