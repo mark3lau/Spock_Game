@@ -5,77 +5,86 @@ The objective of this project was to create an interactive front-end site that w
 <hr>
 
 ## <u>2. User Stories</u>
-As a user who wants to learn and play an extension of the Rock, Paper, Scissors game, I want to navigate the game page with minimum effort and easily understand how to play the game from the instructions.
+As a user who wants to learn and play an extension of the Rock, Paper, Scissors game, I want to navigate the game page with minimum effort and easily understand how to play the game from the instructions. I want to be able to have fun playing against the computer and try and beat it with a higher score.
+
 ### **End user goal:** 
 To understand the rules of the Game of Spock and to try and beat the Computer in the Game of Spock with a higher score.
 
 ### **Acceptance criteria:**
-The landing page will include clear instructions to the rules of the Game of Spock.
+The landing page to include instructions to the rules of the Game of Spock.
 An input box for the user to choose a username before they progress to the game itself.
-The chosen username will be implemented on the game page as soon as the user submits the name.
-The user can choose between two different levels of difficulty, whereby the easy level has five options to choose from, and the hard level has seven options to choose from.
-When the user chooses an option, a result message will display immediately to inform the user as to whether the result is a win, lose or draw, and the scoreboard will update immediately depending on the result.
+The user can choose between different levels of difficulty.
+A scoreboard that keeps track of the score.
+A message that indicates whether the user has won, lost or drawn each round of the game.
 
 ### **Measurement of success:**
 A landing page with clear instructions explaining to the user before they get onto the game page what the rules of the game are. 
-A simple input section for the user to input their username on the landing page.
-The chosen username to be instantly implemented onto the game page and for the user to be taken there directly having clicked the submit button.
+A simple input section for the user to input their username on the landing page. The chosen username to be instantly implemented onto the game page and for the user to be taken there directly having clicked the submit button.
+A user can choose between difficulty levels easily that will add to the enjoyment of the game by the user. 
+When the user chooses an option, a result message will display immediately to inform the user as to whether the result is a win, lose or draw, and the scoreboard will update immediately depending on the result. There will be an acknowledgement of the choice chosen and the score updating using a visual display of colour and/or audio.
+The game will be fully responsive from large to small mobile screen widths. 
 
-A registration form that allows users to complete all mandatory fields and be directed to an acknowledgement page.
-A tennis courts page that includes brief descriptions of the tennis court with a link to the website, contact information and a google map of the location.
-A fully functioning fixed header and social media links in the footer that are fully responsive to medium and small screen widths.
-When the user chooses and option and the score updates, there will be an acknowledgement of the choice chosen and the score updating using a visual display of colour and/or audio.
 <hr>
 
 ## <u>3. Features</u>
 
-### **Header and Navigation bar**
-A fixed header is featured on all three pages of the site, allowing the user to navigate with ease through links to the Home page, Join Us (registration form) page and the London Tennis Courts information page. There is an additional Home page link in the shape of a tennis ball in the top left hand corner of the page to provide further ease for the user to navigate back to the landing page, and to add to the general aesthetics of the site that is tennis related.
+### **Header**
+There is a fixed header featured on both the landing page and game page with the game title displayed.
 
-### **Landing page image**
-The landing page image includes an aerial photo of a tennis court with two players playing tennis that stretches across the full width of the screen. There is also a cover text that overlays the image to describe in short the purpose of the site for the user.
+### <i>**Landing page**</i>
 
-### **How it Works section**
-The How it Works section allows the user to see immediately how the site works and how it could benefit them in four easy steps. Icons and a background image have been included to add to the overall aesthetics of the page.
+### **Rules images**
+There is one image that shows the rules for the Easy Spock level of the game using the five choices of Rock, Paper, Scissors, Spock and Lizard. The second image to the right shows the rules of the game for the Hard Devil level of the game, with the Love and Devil choices added to the five choices of the Easy Spock level.
 
-### **Footer**
-Social media links to Facebook, Instagram, Twitter, YouTube and Linkedin have been included in the footer section of each page, and each link will open in a new tab to allow the user to stay on the site. The purpose of the social media links is to allow users to stay in touch and promote the site using social media.
+### **Username input box**
+There is a clearly indicated input box underneath the rules images for the user to enter their username for the game.
+
+### **Level options**
+There are two level options, Easy Spock and Hard Devil, to the game. The user must click one of the options to proceed to the game page. 
 
 ![home-page](docs/screenshots/home-page.png "Home page")
 
-### **Join Us page**
-The Join Us page is to allow the user to sign up to the site and join the community of London tennis players. The form requires users to submit information including their full name, email address, date of birth, gender and tennis ability. This information will allow the site to contact users and pair them with players of similar ability. A reset button has been added to allow users to quickly reset the form if needed as there are several lines of information requried.
+### <i>**Game page**</i>
+
+### **Username and computer name**
+The user's chosen username will be displayed on the left side of the page, and the Computer's name is displayed on the right.
 
 ![join-us-page](docs/screenshots/join-us-page.png "Join Us page")
 
-### **London Tennis Courts page**
-This page shows useful information on public tennis courts available in North, East, South and West London. Information include a brief summary of the courts, the website link, an email address and the address and Google map of the location of the courts. 
+### **Scoreboard**
+The scoreboard is positioned in the middle of the screen, with the scores updating as the user plays the game. The player's score in the scoreboard will light up in a green colour when the user wins a round, and the computer's score will light up in red when the user loses. For a drawn game, there are no colours displayed.
 
 ![tennis-courts-page-1](docs/screenshots/tennis-courts-page-1.png "Tennis Courts page 1")
    ![tennis-courts-page-2](docs/screenshots/tennis-courts-page-2.png "Tennis Courts page 2")
    ![tennis-courts-page-3](docs/screenshots/tennis-courts-page-3.png "Tennis Courts page 3")
    ![tennis-courts-page-4](docs/screenshots/tennis-courts-page-4.png "Tennis Courts page 4")
-   
+
+### **Results message**
+The user will be greeted with the message "Ready?" when they first land on the game page. This will then display three different types of messages as the user plays the game, one each for winning, losing or drawing a round against the computer.
+
+### **User choices for game**
+For the Easy Spock game, the user will have five choices to choose from between Rock, Paper, Scissors, Lizard and Spock. For the Hard Devil level, there will be the addition of the Love and Devil choices. These choices will be represented by icons towards the bottom of the screen. There is also a "Make your move" message below the choices to indicate to the user that they have to click on a choice.  
+
 <hr>
 
 ## <u>4. Future features</u>
 
-### **Blog page**
-For users to interact with each other more efficiently and discuss all things tennis from tennis courts, rackets, to professional matches and results being played around the world.
+### **Sets of games**
+A feature that allows the user to play to a set high number, for example the first to reach 21 points. Then a separate scoreboard to keep track of the amount of sets the player has won or lost against the computer. This will add an extra layer of competitiveness to the game and overall enjoyment to the user. 
 
-### **Photo/Gallery page**
-A page for users to upload images of their matches and the friends they have played with.
+### **Two player game**
+Include an option for two users to play against each other instead of the game being a one player game against the computer. This additional feature would look to split the screen and for the controls for user choices to be input through the keyboard.
 
-### **Merchandise/shopping page**
-To allow users to purchase new equipment and clothing from retailers and suppliers, and an additional feature allowing users to sell their old tennis racquets and equipment. These features will have the potential to allow the site to generate new revenue streams and provide a sustainability message to users. 
+### **Timer**
+To add a timer element to the game. This could be achieved by either adding a countdown timer before the player makes a choice each time, for example a 3, 2, 1 countdown. Or a countdown timer for the user to try and beat the computer before the timer reaches zero. This feature could work nicely alongside the "Sets of games" feature mentioned earlier.
 <hr>
 
 ## <u>5. Typography and color scheme</u>
-I have chosen a green and orange colour scheme as well as a bold font. Both provide a vibrant, modern and friendly site that will hopefully appeal to users. The green is also a colour associated with the Wimbledon tennis championship in London, a Grand Slam event that is well known around the world.
+I chose a dark background and a light pink colour scheme. I wanted to associate the colour scheme to Star Trek and the acknowledgement of Spock as being a main part of the game. The dark background has an added "galaxy/space" effect with tiny specks of white light to represent distant galaxies and the night sky. The light pink is a nice contrast to the dark background and makes the text legible. The main font is "press start 2p" which is reminiscent of the 1990s arcade games, this is only used for the game title and text that are large enough so that it's easy to read. For scoreboard text and messages this is in "space grotesk" font which is easier to read for the user and keeps with the "space" theme.
 <hr>
 
 ## <u>6. Wireframes</u>
-Using Balsamiq a basic wireframe was created to outline what I wanted to achieve with the site, with the initial layout and information required for each page.
+Wireframes were created using Balsamiq to outline what the site would look like in desktop and mobile screen wdiths. 
 
 #### **Large and medium screen size**
 

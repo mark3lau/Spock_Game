@@ -15,7 +15,7 @@ let hardSubmit = document.getElementById("hardSubmit").addEventListener("click",
 let buttons = document.getElementsByTagName("button");
 
 for (let button of buttons) {
-if (easySubmit) {
+if (easySubmit = true) {
         loadEasyGame();
     } else {
         loadHardGame();
@@ -113,6 +113,8 @@ function changeWord(word) {
 /**
  * Generate random computer choice
  */
+
+let 
 
 function getComputerChoice(loadEasyGame, loadHardGame) {
     if (loadEasyGame) {
