@@ -4,6 +4,10 @@
  * until submit has been entered or clicked
  */
 
+ let controlsEasy = ["rock", "paper", "scissors", "lizard", "spock"];
+ let controlsHard = ["rock", "paper", "scissors", "lizard", "spock", "love", "devil"];
+ let controls = [];
+
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("gamePage").style.display = "none";
     document.getElementById("landingPage").style.display = "block";
@@ -24,6 +28,7 @@ if (easySubmit = true) {
 
 function loadEasyGame() {
     let username = document.getElementById("inputName").value;
+    controls = controlsEasy;
     document.getElementById("playerName").innerHTML = username;
     document.getElementById("landingPage").style.display = "none";
     document.getElementById("gamePage").style.display = "block";
@@ -33,6 +38,7 @@ function loadEasyGame() {
 
 function loadHardGame() {
     let username = document.getElementById("inputName").value;
+    controls = controlsHard;
     document.getElementById("playerName").innerHTML = username;
     document.getElementById("landingPage").style.display = "none";
     document.getElementById("gamePage").style.display = "block";
@@ -54,9 +60,6 @@ let love_span = document.getElementById("love");
 let devil_span = document.getElementById("devil");
 let beepWin = new Audio ("assets/sounds/win_mixkit-retro-game-notification-212.wav");
 let beepLose = new Audio ("assets/sounds/lose_mixkit-retro-arcade-game-over-470.wav");
-
-let controlsEasy = ["rock", "paper", "scissors", "lizard", "spock"];
-let controlsHard = ["rock", "paper", "scissors", "lizard", "spock", "love", "devil"];
 
 /**
  * Add event listeners for
@@ -101,28 +104,15 @@ main();
  */
 
 function changeWord(word) {
-    if (word === "rock") return "Rock";
-    if (word === "paper") return "Paper";
-    if (word === "scissors") return "Scissors";
-    if (word === "lizard") return "Lizard";
-    if (word === "spock") return "Spock";
-    if (word === "love") return "Love";
-    return "Devil";
+    return word.charAt(0).toUpperCase() + word.slice(1);
 };
 
 /**
  * Generate random computer choice
  */
 
-let 
-
-function getComputerChoice(loadEasyGame, loadHardGame) {
-    if (loadEasyGame) {
-        const randomNumber = Math.floor(Math.random() * controlsEasy.length);
-        return controlsEasy[randomNumber];
-    } else (loadHardGame);
-        const randomNumber = Math.floor(Math.random() * controlsHard.length);
-        return controlsHard[randomNumber];
+function getComputerChoice() {
+    return controls[Math.floor(Math.random() * controls.length)];
 };
 
 /**
