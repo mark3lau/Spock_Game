@@ -4,9 +4,9 @@
  * until submit has been entered or clicked
  */
 
-let controls = [];
 let controlsEasy = ["rock", "paper", "scissors", "lizard", "spock"];
 let controlsHard = ["rock", "paper", "scissors", "lizard", "spock", "love", "devil"];
+let controls = [];
 
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("gamePage").style.display = "none";
@@ -107,7 +107,6 @@ function changeWord(word) {
     return word.charAt(0).toUpperCase() + word.slice(1);
 };
 
-
 /**
  * Generate random computer choice
  */
@@ -150,82 +149,104 @@ function draw(playerChoice, computerChoice) {
  * player choice and computer choice
  */
 
-function game() {
+function game(playerChoice) {
     const computerChoice = getComputerChoice();
     if (playerChoice === computerChoice) {
-        draw();
+        return draw(playerChoice, computerChoice);
     } else if (playerChoice === "rock" && (
             computerChoice === "scissors"||
             computerChoice === "lizard"||
             computerChoice === "devil")) {
-        win();
+        return win(playerChoice, computerChoice);
+    } else if (playerChoice === "paper" && (
+            computerChoice === "spock"||
+            computerChoice === "love"||
+            computerChoice === "rock")) {
+            return win(playerChoice, computerChoice);
     } else if (playerChoice === "scissors" && (
             computerChoice === "love"||
             computerChoice === "paper"||
             computerChoice === "lizard")) {
-        win();
-    } else if (playerChoice === "scissors" && (
-            computerChoice === "love"||
-            computerChoice === "paper"||
-            computerChoice === "lizard")) {
-        win();
+                return win(playerChoice, computerChoice);
+    } else if (playerChoice === "lizard" && (
+        computerChoice === "love"||
+        computerChoice === "paper"||
+        computerChoice === "spock")) {
+            return win(playerChoice, computerChoice);
+    } else if (playerChoice === "spock" && (
+        computerChoice === "rock"||
+        computerChoice === "scissors"||
+        computerChoice === "devil")) {
+            return win(playerChoice, computerChoice);
+    } else if (playerChoice === "love" && (
+        computerChoice === "spock"||
+        computerChoice === "rock"||
+        computerChoice === "devil")) {
+            return win(playerChoice, computerChoice);
+    } else if (playerChoice === "devil" && (
+        computerChoice === "paper"||
+        computerChoice === "scissors"||
+        computerChoice === "lizard")) {
+            return win(playerChoice, computerChoice);
     } else {
-        lose();
+        return lose(playerChoice, computerChoice);
+    }
 };
 
-    // const computerChoice = getComputerChoice();
-    // switch (playerChoice + computerChoice) {
-    // case "rockscissors":
-    // case "rocklizard":
-    // case "rockdevil":
-    // case "paperrock":
-    // case "paperspock":
-    // case "paperlove":
-    // case "scissorspaper":
-    // case "scissorslizard":
-    // case "scissorslove":
-    // case "lizardspock":
-    // case "lizardpaper":
-    // case "lizardlove":
-    // case "lovespock":
-    // case "loverock":
-    // case "lovedevil":
-    // case "devilpaper":
-    // case "devilscissors":
-    // case "devillizard":
-    //     win(playerChoice, computerChoice);
-    //     break;
-    // case "rockpaper":
-    // case "rockspock":
-    // case "rocklove":
-    // case "paperscissors":
-    // case "paperlizard":
-    // case "paperdevil":
-    // case "scissorsspock":
-    // case "scissorsrock":
-    // case "scissorsdevil":
-    // case "lizardrock":
-    // case "lizardscissors":
-    // case "lizarddevil":
-    // case "spockpaper":
-    // case "spocklizard":
-    // case "spocklove":
-    // case "lovepaper":
-    // case "lovescissors":
-    // case "lovelizard":
-    // case "devillove":
-    // case "devilspock":
-    // case "devilrock":
-    //     lose(playerChoice, computerChoice);
-    //     break;
-    // case "rockrock":
-    // case "paperpaper":
-    // case "scissorsscissors":
-    // case "lizardlizard":
-    // case "spockspock":
-    // case "lovelove":
-    // case "devildevil":
-    //     draw(playerChoice, computerChoice);
-    //     break;
-    // }
-}; 
+// function game() {
+//     const computerChoice = getComputerChoice();
+//     switch (playerChoice + computerChoice) {
+//     case "rockscissors":
+//     case "rocklizard":
+//     case "rockdevil":
+//     case "paperrock":
+//     case "paperspock":
+//     case "paperlove":
+//     case "scissorspaper":
+//     case "scissorslizard":
+//     case "scissorslove":
+//     case "lizardspock":
+//     case "lizardpaper":
+//     case "lizardlove":
+//     case "lovespock":
+//     case "loverock":
+//     case "lovedevil":
+//     case "devilpaper":
+//     case "devilscissors":
+//     case "devillizard":
+//         win(playerChoice, computerChoice);
+//         break;
+//     case "rockpaper":
+//     case "rockspock":
+//     case "rocklove":
+//     case "paperscissors":
+//     case "paperlizard":
+//     case "paperdevil":
+//     case "scissorsspock":
+//     case "scissorsrock":
+//     case "scissorsdevil":
+//     case "lizardrock":
+//     case "lizardscissors":
+//     case "lizarddevil":
+//     case "spockpaper":
+//     case "spocklizard":
+//     case "spocklove":
+//     case "lovepaper":
+//     case "lovescissors":
+//     case "lovelizard":
+//     case "devillove":
+//     case "devilspock":
+//     case "devilrock":
+//         lose(playerChoice, computerChoice);
+//         break;
+//     case "rockrock":
+//     case "paperpaper":
+//     case "scissorsscissors":
+//     case "lizardlizard":
+//     case "spockspock":
+//     case "lovelove":
+//     case "devildevil":
+//         draw(playerChoice, computerChoice);
+//         break;
+//     }
+// };
