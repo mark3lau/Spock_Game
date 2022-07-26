@@ -145,11 +145,9 @@ HTML, CSS and vanilla JavaScript.
 
    ### **Fixed bugs**
 
-   How it Works icons. 
-   
-   Bug - The icons were positioned in the top right of the text box and not centered properly in line with the text, and I could not change the size of the icons to fit inside the text box.
-
-   Solution - The first step was to change the position of the How it Works divs to position:relative. In order to target the size of the icons I used em values to the font-size property. The icons were also given a position:absolute property, and in order to center the icons I used a left: calc(50% - 26.25px) to ensure it was centered properly.
+   game functions, not putting in arguments in brackets and therefore adding both scores.
+   playerchoice not properly defined in game function, therefore changeWord not working.
+   controls [] and controlsEast and controlsHard
 
    ### **Unfixed bugs**
    There are no known unfixed bugs.
