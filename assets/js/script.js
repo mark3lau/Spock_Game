@@ -24,8 +24,8 @@ let lizard_span = document.getElementById("lizard");
 let spock_span = document.getElementById("spock");
 let love_span = document.getElementById("love");
 let devil_span = document.getElementById("devil");
-let beepWin = new Audio ("assets/sounds/win_mixkit-retro-game-notification-212.wav");
-let beepLose = new Audio ("assets/sounds/lose_mixkit-retro-arcade-game-over-470.wav");
+let beepWin = new Audio ("assets/sounds/win_retro-arcade-audio.wav");
+let beepLose = new Audio ("assets/sounds/lose_retro-arcade-audio.wav");
 
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("gamePage").style.display = "none";
@@ -37,15 +37,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function loadLevels() {
         levels.style.display = "block";
-};
+}
 
 for (let button of buttons) {
-if (easySubmit = true) {
+if (easySubmit === true) {
         loadEasyGame();
     } else {
         loadHardGame();
     }
-};
+}
 
 function loadEasyGame() {
     let username = document.getElementById("inputName").value;
@@ -55,7 +55,7 @@ function loadEasyGame() {
     document.getElementById("gamePage").style.display = "block";
     document.getElementById("love").style.display = "none";
     document.getElementById("devil").style.display = "none";
-};
+}
 
 function loadHardGame() {
     let username = document.getElementById("inputName").value;
@@ -65,7 +65,7 @@ function loadHardGame() {
     document.getElementById("gamePage").style.display = "block";
     document.getElementById("love").style.display = "inline";
     document.getElementById("devil").style.display = "inline";
-};
+}
 
 /**
  * Add event listeners for
@@ -95,12 +95,12 @@ function main() {
     
     love_span.addEventListener("click", function() {
         game("love");
-    })
+    });
     
     devil_span.addEventListener("click", function() {
         game("devil");
-    })
-};
+    });
+}
 
 /**
  * Change the choice word of the 
@@ -109,7 +109,7 @@ function main() {
 
 function changeWord(word) {
     return word.charAt(0).toUpperCase() + word.slice(1);
-};
+}
 
 /**
  * Generate random computer choice
@@ -117,7 +117,7 @@ function changeWord(word) {
 
 function getComputerChoice() {
     return controls[Math.floor(Math.random() * controls.length)];
-};
+}
 
 /**
  * Functions for win, lose and draw and 
@@ -130,9 +130,9 @@ function win(playerChoice, computerChoice) {
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `You win 🎉! ${changeWord(playerChoice)} beats ${changeWord(computerChoice)}`;
     playerScore_span.classList.add("win-green");
-    setTimeout(function() {playerScore_span.classList.remove("win-green")}, 250);
+    setTimeout(function() {playerScore_span.classList.remove("win-green");}, 250);
     beepWin.play();
-};
+}
 
 function lose(playerChoice, computerChoice) {
     ++computerScore;
@@ -140,13 +140,13 @@ function lose(playerChoice, computerChoice) {
     computerScore_span.innerHTML = computerScore;
     result_p.innerHTML = `You lose 👎! ${changeWord(playerChoice)} loses to ${changeWord(computerChoice)}`;
     computerScore_span.classList.add("lose-red");
-    setTimeout(function() {computerScore_span.classList.remove("lose-red")}, 250);
+    setTimeout(function() {computerScore_span.classList.remove("lose-red");}, 250);
     beepLose.play();
-};
+}
 
 function draw(playerChoice, computerChoice) {
     result_p.innerHTML = `It's a draw 😐! ${changeWord(playerChoice)} is ${changeWord(computerChoice)}`;
-};
+}
     
 /**
  * Define the game results between
@@ -166,33 +166,33 @@ function game(playerChoice) {
             computerChoice === "spock"||
             computerChoice === "love"||
             computerChoice === "rock")) {
-            return win(playerChoice, computerChoice);
+        return win(playerChoice, computerChoice);
     } else if (playerChoice === "scissors" && (
             computerChoice === "love"||
             computerChoice === "paper"||
             computerChoice === "lizard")) {
-                return win(playerChoice, computerChoice);
+        return win(playerChoice, computerChoice);
     } else if (playerChoice === "lizard" && (
-        computerChoice === "love"||
-        computerChoice === "paper"||
-        computerChoice === "spock")) {
-            return win(playerChoice, computerChoice);
+            computerChoice === "love"||
+            computerChoice === "paper"||
+            computerChoice === "spock")) {
+        return win(playerChoice, computerChoice);
     } else if (playerChoice === "spock" && (
-        computerChoice === "rock"||
-        computerChoice === "scissors"||
-        computerChoice === "devil")) {
-            return win(playerChoice, computerChoice);
+            computerChoice === "rock"||
+            computerChoice === "scissors"||
+            computerChoice === "devil")) {
+        return win(playerChoice, computerChoice);
     } else if (playerChoice === "love" && (
-        computerChoice === "spock"||
-        computerChoice === "rock"||
-        computerChoice === "devil")) {
-            return win(playerChoice, computerChoice);
+            computerChoice === "spock"||
+            computerChoice === "rock"||
+            computerChoice === "devil")) {
+        return win(playerChoice, computerChoice);
     } else if (playerChoice === "devil" && (
-        computerChoice === "paper"||
-        computerChoice === "scissors"||
-        computerChoice === "lizard")) {
-            return win(playerChoice, computerChoice);
+            computerChoice === "paper"||
+            computerChoice === "scissors"||
+            computerChoice === "lizard")) {
+        return win(playerChoice, computerChoice);
     } else {
         return lose(playerChoice, computerChoice);
     }
-};
+}
