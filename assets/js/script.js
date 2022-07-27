@@ -4,19 +4,40 @@
  * until submit has been entered or clicked
  */
 
-let controlsEasy = ["rock", "paper", "scissors", "lizard", "spock"];
-let controlsHard = ["rock", "paper", "scissors", "lizard", "spock", "love", "devil"];
+const controlsEasy = ["rock", "paper", "scissors", "lizard", "spock"];
+const controlsHard = ["rock", "paper", "scissors", "lizard", "spock", "love", "devil"];
 let controls = [];
-
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("gamePage").style.display = "none";
-    document.getElementById("landingPage").style.display = "block";
-    document.getElementById("inputName").focus();
-});
-
+let inputName = document.getElementById("inputName").addEventListener("keydown", loadLevels);
+let levels = document.getElementById("levels");
 let easySubmit = document.getElementById("easySubmit").addEventListener("click", loadEasyGame);
 let hardSubmit = document.getElementById("hardSubmit").addEventListener("click", loadHardGame);
 let buttons = document.getElementsByTagName("button");
+let playerScore = 0;
+let computerScore = 0;
+let playerScore_span = document.getElementById("playerScore");
+let computerScore_span = document.getElementById("computerScore");
+let result_p = document.querySelector(".result > p");
+let rock_span = document.getElementById("rock");
+let paper_span = document.getElementById("paper");
+let scissors_span = document.getElementById("scissors");
+let lizard_span = document.getElementById("lizard");
+let spock_span = document.getElementById("spock");
+let love_span = document.getElementById("love");
+let devil_span = document.getElementById("devil");
+let beepWin = new Audio ("assets/sounds/win_mixkit-retro-game-notification-212.wav");
+let beepLose = new Audio ("assets/sounds/lose_mixkit-retro-arcade-game-over-470.wav");
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("gamePage").style.display = "none";
+    levels.style.display = "none";
+    document.getElementById("landingPage").style.display = "block";
+    document.getElementById("inputName").focus();
+    main();
+});
+
+function loadLevels() {
+        levels.style.display = "block";
+};
 
 for (let button of buttons) {
 if (easySubmit = true) {
@@ -45,21 +66,6 @@ function loadHardGame() {
     document.getElementById("love").style.display = "inline";
     document.getElementById("devil").style.display = "inline";
 };
-
-let playerScore = 0;
-let computerScore = 0;
-let playerScore_span = document.getElementById("playerScore");
-let computerScore_span = document.getElementById("computerScore");
-let result_p = document.querySelector(".result > p");
-let rock_span = document.getElementById("rock");
-let paper_span = document.getElementById("paper");
-let scissors_span = document.getElementById("scissors");
-let lizard_span = document.getElementById("lizard");
-let spock_span = document.getElementById("spock");
-let love_span = document.getElementById("love");
-let devil_span = document.getElementById("devil");
-let beepWin = new Audio ("assets/sounds/win_mixkit-retro-game-notification-212.wav");
-let beepLose = new Audio ("assets/sounds/lose_mixkit-retro-arcade-game-over-470.wav");
 
 /**
  * Add event listeners for
@@ -95,8 +101,6 @@ function main() {
         game("devil");
     })
 };
-
-main();
 
 /**
  * Change the choice word of the 
@@ -192,61 +196,3 @@ function game(playerChoice) {
         return lose(playerChoice, computerChoice);
     }
 };
-
-// function game() {
-//     const computerChoice = getComputerChoice();
-//     switch (playerChoice + computerChoice) {
-//     case "rockscissors":
-//     case "rocklizard":
-//     case "rockdevil":
-//     case "paperrock":
-//     case "paperspock":
-//     case "paperlove":
-//     case "scissorspaper":
-//     case "scissorslizard":
-//     case "scissorslove":
-//     case "lizardspock":
-//     case "lizardpaper":
-//     case "lizardlove":
-//     case "lovespock":
-//     case "loverock":
-//     case "lovedevil":
-//     case "devilpaper":
-//     case "devilscissors":
-//     case "devillizard":
-//         win(playerChoice, computerChoice);
-//         break;
-//     case "rockpaper":
-//     case "rockspock":
-//     case "rocklove":
-//     case "paperscissors":
-//     case "paperlizard":
-//     case "paperdevil":
-//     case "scissorsspock":
-//     case "scissorsrock":
-//     case "scissorsdevil":
-//     case "lizardrock":
-//     case "lizardscissors":
-//     case "lizarddevil":
-//     case "spockpaper":
-//     case "spocklizard":
-//     case "spocklove":
-//     case "lovepaper":
-//     case "lovescissors":
-//     case "lovelizard":
-//     case "devillove":
-//     case "devilspock":
-//     case "devilrock":
-//         lose(playerChoice, computerChoice);
-//         break;
-//     case "rockrock":
-//     case "paperpaper":
-//     case "scissorsscissors":
-//     case "lizardlizard":
-//     case "spockspock":
-//     case "lovelove":
-//     case "devildevil":
-//         draw(playerChoice, computerChoice);
-//         break;
-//     }
-// };
