@@ -45,7 +45,6 @@ There is a clearly indicated input box underneath the rules images for the user 
 There are two level options, Easy Spock and Hard Devil, to the game which are not displayed until the user has entered a username. The user must click one of the options to proceed to the game page. 
 
 ![landing-page-levels](docs/screenshots/landing-page-levels.png "Landing page with levels")
-![landing-page-levels](docs/screenshots/landing-page_level-selected.png "Landing page with level selected")
 
 ### <i>**Game page**</i>
 
@@ -53,6 +52,7 @@ There are two level options, Easy Spock and Hard Devil, to the game which are no
 The user's chosen username will be displayed on the left side of the page, and the Computer's name is displayed on the right.
 
 ![easy-game-page](docs/screenshots/easy-game-page_ready.png "Easy game page")
+![hard-game-page](docs/screenshots/hard-game-page_ready.png "Hard game page")
 
 ### **Scoreboard**
 The scoreboard is positioned in the middle of the screen, with the scores updating as the user plays the game. The player's score in the scoreboard will light up in a green colour when the user wins a round, and the computer's score will light up in red when the user loses. For a drawn game, there are no colours displayed.
@@ -60,14 +60,12 @@ The scoreboard is positioned in the middle of the screen, with the scores updati
 ### **Results message**
 The user will be greeted with the message "Ready?" when they first land on the game page. This will then display three different types of messages as the user plays the game, one each for winning, losing or drawing a round against the computer.
 
-![game-page-results](docs/screenshots/game-page_win.png "Win result")
-![game-page-results](docs/screenshots/game-page_lose.png "Lose result")
-![game-page-results](docs/screenshots/game-page_draw.png "Draw result")
-
 ### **User choices for game**
 For the Easy Spock game, the user will have five choices to choose from between Rock, Paper, Scissors, Lizard and Spock. For the Hard Devil level, there will be the addition of the Love and Devil choices. These choices will be represented by icons towards the bottom of the screen. There is also a "Make your move" message below the choices to indicate to the user that they have to click on a choice to start the game.
 
-![game-page-results](docs/screenshots/ "Draw result")
+![easy-game-page-results](docs/screenshots/game-page_win.png "Win result on easy game")
+![easy-game-page-results](docs/screenshots/game-page_lose.png "Lose result on easy game")
+![easy-game-page-results](docs/screenshots/game-page_draw.png "Draw result on easy game")
 
 ### **Restart the game**
 The user can click on the game title Game of Spock in the header which will refresh the page and take the user back to the landing page to restart the game.
@@ -139,24 +137,25 @@ The site has been deployed on Github pages.
    ##### Landing page
    As the user is on the landing page, the user is shown the game title in the header, and two images underneath with the rules of the game. There is a message that informs the user to enter a username in a text box, where the pointer is focused on the text box already as the landing page loads. The user has to enter text into the text box before the options for the two difficulty levels are displayed on the page, Easy Spock and Hard Devil. 
 
-   ![nav-bar-highlight](docs/screenshots/home-button-highlight.png "Nav bar highlight")
-
-   ![social-media-link-highlight](docs/screenshots/twitter-highlight.png "Social media link highlight")
+   ![landing-page-levels](docs/screenshots/landing-page_level-selected.png "Landing page with level selected")
 
    ##### Game page
    When the user gets to the game page, the username that was typed into the text box on the landing page will appear on the left side of the screen. In between the username and computer name, there is a scoreboard that indicates the scores for the player and the computer. Underneath the scoreboard is a "Ready?" message, the choices the user needs to make which are represented as icons, and another message to promt the user to make the first move to start the game. 
    When the user hovers over the icons, the icons will "pop" out and is highlighted with a blue border. When the user clicks on a choice, the game starts immediately and the score will automatically update and the results message will appear to show the user whether they have won that round or not. If the user has won a round, the user's score in the scoreboard will light up green. If the user has lost the round, the computer's score in the scoreboard will light up red. If it's a draw, it will only be indicated through the results message.
    If the user clicks on the game title in the header, this will refresh the page and take the user to the landing page to restart the game.
 
-   ![join-us-error-message](docs/screenshots/join-us-error-message.png "Join us page error message")
+   ![hard-game-page](docs/screenshots/hard-game-page_win.png "Win result on hard game")
+   ![hard-game-page](docs/screenshots/hard-game-page_lose.png "Lose result on hard game")
+   ![hard-game-page](docs/screenshots/hard-game-page_draw.png "Draw result on hard game")
+   ![hard-game-page](docs/screenshots/hard-game-page_icon-selected.png "Icon selected on hard game")
 
    #### **Mobile** 
    For a mobile width of 390px, the rules images are stacked on top of each other. The heading, images and text are all made smaller to fit the screen size better. In the game page, the icons, messages and names are all made smaller. The transformation of the icons when the user hovers over an icon has also been made smaller to minimise the movement of the icons from one row to another.
 
-   ![home-page-390px](docs/screenshots/home-page-390px.png "Home page 390px")
-   ![join-us-page-390px](docs/screenshots/join-us-page-390px.png "Join Us page 390px")
-   ![thank-you-page-390px](docs/screenshots/thank-you-page-390px.png "Thank You page 390px")
-   ![tennis-courts-page-390px](docs/screenshots/tennis-courts-page-390px.png "Tennis Courts page 390px")
+   ![landing-page-390px](docs/screenshots/mobile_landing-page.png "Landing page 390px")
+   ![landing-page-390px](docs/screenshots/mobile_landing-page-levels.png "Landing page with levels 390px")
+   ![easy-game-page-390px](docs/screenshots/mobile_game-page-easy.png "Easy game page 390px")
+   ![hard-game-page-390px](docs/screenshots/mobile_game-page-hard.png "Hard game page 390px")
 
    ### **Fixed bugs**
    A loadlevels function and a keydown event listener was added to JavaScript in order to prompt the user to enter a username in the text box before progressing to the game page. Before this, the user was able to click on a difficulty level straight away before typing anything into the text box.
