@@ -41,18 +41,18 @@ h1 {
 
 .rules {
     text-align: center;
-    margin: 2%;
+    margin: 1%;
 }
 
 #easyRules {
-    width: 400px;
-    height: 400px;
+    width: 380px;
+    height: 380px;
     padding: 1%;
 }
 
 #hardRules {
-    width: 400px;
-    height: 400px;
+    width: 380px;
+    height: 380px;
     padding: 1%;
 }
 
@@ -64,6 +64,7 @@ h1 {
 }
 
 #inputName, #easySubmit, #hardSubmit {
+    margin: 0.5%;
     padding: 0.5%;
     border: 3px solid #ff91a4;
     font-family: 'press start 2p', Helvetica, sans-serif;
@@ -74,7 +75,7 @@ h1 {
 }
 
 #levelsChoices {
-    margin-left: 36%;
+    text-align: center;
 }
 
 #easySubmit:hover, #hardSubmit:hover {
@@ -225,7 +226,7 @@ footer {
 
 }
 
-/* For medium screen sizes from 1000px wide and down */
+/* For large screen sizes from 1000px wide and down */
 
 @media screen and (max-width: 1000px) {
 
@@ -233,22 +234,15 @@ footer {
         font-size: 280%;
     }
     
-    #rulesImage {
-        max-width: 75%;
-        max-height: 75%;
-        margin: 5%;
+    #easyRules, #hardRules {
+        max-width: 300px;
+        max-height: 300px;
+        margin: 2%;
     }
     
-    #name {
-        font-size: 80%;
-        width: 65%;
-    }
-    
-    #submit {
-        font-size: 60%;
-        width: 30%;
-        padding: 4px;
-        margin: 4%;
+    .username, #levelsLabel {
+        font-size: 120%;
+        text-align: center;
     }
     
     .scoreBoard {
@@ -287,25 +281,90 @@ footer {
         margin: 5%;
     }
     
-    .controls {
-        margin-right: 3%;
-    }
-    
     .controls i {
         margin: 3%;
         padding: 2.5%;
         font-size: 5em;
     }
     
+    .message {
+        font-size: 150%;
+    }
+
+}
+
+/* For medium screen sizes from 650px wide and down */
+
+@media screen and (max-width: 650px) {
+
+    h1 {
+        font-size: 170%;
+    }
+    
+    #easyRules, #hardRules {
+        max-width: 250px;
+        max-height: 250px;
+        margin: 2%;
+    }
+    
+    .username, #levelsLabel {
+        font-size: 100%;
+        text-align: center;
+        margin: 1%;
+    }
+
+    #easySubmit, #hardSubmit {
+        font-size: 100%;
+    }
+    
+    .scoreBoard {
+        margin-top: 30px;
+        padding: 2%;
+    }
+    
+    #playerName {
+        font-size: 50%;
+        margin-left: 2%;
+        padding-right: 5%;
+        flex: 1;
+        margin-top: 10%;
+        line-height: 1%;
+    }
+    
+    #computerName {
+        font-size: 50%;
+        margin-right: 2%;
+        padding-left: 5%;
+        flex: 1;
+        margin-top: 10%;
+        line-height: 1%;
+    }
+    
+    .scores {
+        font-size: 70%;
+        margin: 0;
+        border: 2px solid #05D0EB;
+        padding: 2% 4%;
+        text-align: center;
+    }
+    
+    .result {
+        font-size: 150%;
+        margin: 5%;
+    }
+    
+    .controls i {
+        margin: 3%;
+        padding: 2.5%;
+        font-size: 4em;
+    }
+
     .controls i:hover {
         transform: scale(1.2);
-        cursor: pointer;
-        border: 1px solid #05D0EB;
-        border-radius: 50%;
     }
     
     .message {
-        font-size: 150%;
+        font-size: 100%;
     }
 
 }
@@ -315,29 +374,23 @@ footer {
 @media screen and (max-width: 390px) {
 
 h1 {
-    font-size: 150%;
+    font-size: 120%;
 }
 
-#rulesImage {
-    max-width: 50%;
-    max-height: 50%;
-    margin: 10%;
+#easyRules, #hardRules {
+    max-width: 220px;
+    max-height: 220px;
+    margin: 2%;
 }
 
-.username {
-    font-size: 100%;
+.username, #levelsLabel {
+    font-size: 80%;
+    text-align: center;
+    margin: 1%;
 }
 
-#name {
-    font-size: 50%;
-    width: 65%;
-}
-
-#submit {
-    font-size: 70%;
-    width: 50%;
-    padding: 2px;
-    margin: 4%;
+#easySubmit, #hardSubmit {
+    font-size: 80%;
 }
 
 .scoreBoard {
@@ -375,29 +428,18 @@ h1 {
 }
 
 .result {
-    font-size: 150%;
-    margin: 10%;
-}
-
-.controls {
-    margin-right: 3%;
+    font-size: 110%;
+    margin: 5%;
 }
 
 .controls i {
     margin: 3%;
     padding: 2.5%;
-    font-size: 4em;
-}
-
-.controls i:hover {
-    transform: scale(1.2);
-    cursor: pointer;
-    border: 1px solid #05D0EB;
-    border-radius: 50%;
+    font-size: 3em;
 }
 
 .message {
-    font-size: 100%;
+    font-size: 80%;
 }
 
 }
