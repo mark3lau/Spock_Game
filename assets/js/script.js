@@ -1,9 +1,3 @@
-/**
- * Dom content to load. 
- * Hide the Game page and load Landing page 
- * until submit has been entered or clicked
- */
-
 const controlsEasy = ["rock", "paper", "scissors", "lizard", "spock"];
 const controlsHard = ["rock", "paper", "scissors", "lizard", "spock", "love", "devil"];
 let controls = [];
@@ -27,6 +21,12 @@ let devil_span = document.getElementById("devil");
 let beepWin = new Audio ("assets/sounds/win_retro-arcade-audio.wav");
 let beepLose = new Audio ("assets/sounds/lose_retro-arcade-audio.wav");
 
+/**
+ * Dom content to load. 
+ * Hide the Game page and load Landing page 
+ * until submit has been entered or clicked
+ */
+
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("gamePage").style.display = "none";
     levels.style.display = "none";
@@ -34,6 +34,10 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("inputName").focus();
     main();
 });
+
+/** Function to load levels buttons
+ * only when the user has typed
+ * into the text box */ 
 
 function loadLevels() {
         levels.style.display = "block";
@@ -46,6 +50,10 @@ if (easySubmit === true) {
         loadHardGame();
     }
 }
+
+/** Functions to load the Easy Game options
+ * or the Hard Game options
+ */
 
 function loadEasyGame() {
     let username = document.getElementById("inputName").value;
@@ -104,7 +112,7 @@ function main() {
 
 /**
  * Change the choice word of the 
- * result display message
+ * result display message to uppercase
  */
 
 function changeWord(word) {
@@ -120,7 +128,7 @@ function getComputerChoice() {
 }
 
 /**
- * Functions for win, lose and draw and 
+ * Functions for win, lose, draw and 
  * their results
  */
 
@@ -149,7 +157,7 @@ function draw(playerChoice, computerChoice) {
 }
     
 /**
- * Define the game results between
+ * Game function to define the game results between
  * player choice and computer choice
  */
 

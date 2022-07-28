@@ -63,9 +63,9 @@ The user will be greeted with the message "Ready?" when they first land on the g
 ### **User choices for game**
 For the Easy Spock game, the user will have five choices to choose from between Rock, Paper, Scissors, Lizard and Spock. For the Hard Devil level, there will be the addition of the Love and Devil choices. These choices will be represented by icons towards the bottom of the screen. There is also a "Make your move" message below the choices to indicate to the user that they have to click on a choice to start the game.
 
-![easy-game-page-results](docs/screenshots/game-page_win.png "Win result on easy game")
-![easy-game-page-results](docs/screenshots/game-page_lose.png "Lose result on easy game")
-![easy-game-page-results](docs/screenshots/game-page_draw.png "Draw result on easy game")
+![easy-game-page-results](docs/screenshots/easy-game-page_win.png "Win result on easy game")
+![easy-game-page-results](docs/screenshots/easy-game-page_lose.png "Lose result on easy game")
+![easy-game-page-results](docs/screenshots/easy-game-page_draw.png "Draw result on easy game")
 
 ### **Restart the game**
 The user can click on the game title Game of Spock in the header which will refresh the page and take the user back to the landing page to restart the game.
@@ -93,34 +93,29 @@ Wireframes were created using Balsamiq to outline what the site would look like,
 
 #### **Large and medium screen widths**
 
-![home-page-1](docs/wireframes/home-page-1.png "Home page 1")
-![home-page-2](docs/wireframes/home-page-2.png "Home page 2")
-![join-us-page](docs/wireframes/join-us-page.png "Join us page")
-![tennis-courts-page-1](docs/wireframes/tennis-courts-page-1.png "Tennis courts page 1")
-![tennis-courts-page-2](docs/wireframes/tennis-courts-page-2.png "Tennis courts page 2")
+![landing-page](docs/wireframes/wireframes_landing-page.png "Landing page")
+![game-page](docs/wireframes/wireframes_game-page.png "Game page")
 
 #### **Small screen widths (mobile)**
 
-![home-page-1-390px](docs/wireframes/home-page%201-390px.png "Home page 1 390px")
-![home-page-2-390px](docs/wireframes/home-page%202-390px.png "Home page 2 390px")
-![home-page-3-390px](docs/wireframes/home-page%203-390px.png "Home page 3 390px")
-![join-us-page-1-390px](docs/wireframes/join-us-page%201-390px.png "Join us page 1 390px")
-![join-us-page-2-390px](docs/wireframes/join-us-page%202-390px.png "Join us page 2 390px")
-![tennis-courts-page-1-390px](docs/wireframes/tennis-courts-page-1-390px.png "Tennis courts page 1 390px")
-![tennis-courts-page-2-390px](docs/wireframes/tennis-courts-page-2-390px.png "Tennis courts page 2 390px")
-![tennis-courts-page-3-390px](docs/wireframes/tennis-courts-page-3-390px.png "Tennis courts page 3 390px")
-![tennis-courts-page-4-390px](docs/wireframes/tennis-courts-page-4-390px.png "Tennis courts page 4 390px")
+![mobile-page](docs/wireframes/wireframes_mobile.png "Mobile page")
 
 <hr>
 
 ## <u>7. Technology</u>
-HTML and CSS were used to give the site it's core text and styling structures.
-JavaScript was used to run the interactive parts of the game, including but not limited to the score updates, generating the random computer choice and the logic determining the win, lose and draw outcomes.
-Two fonts were chosen from Google Fonts for the text styles of the site.
-The icons for the player choices were taken from Font Awesome.
-The audio files for the win and lose noises were taken from Mixkit.
-Gitpod was the application chosen to develop the site.
-The site has been deployed on Github pages. 
+<b>HTML and CSS</b> were used to give the site it's core text and styling structures.
+
+<b>JavaScript</b> was used to run the interactive parts of the game, including but not limited to the score updates, generating the random computer choice and the logic determining the win, lose and draw outcomes.
+
+Two fonts were chosen from <b>Google Fonts</b> for the text styles of the site.
+
+The icons for the player choices were taken from <b>Font Awesome</b>.
+
+The audio files for the win and lose noises were taken from <b>Mixkit</b>.
+
+<b>Gitpod</b> was the application chosen to develop the site.
+
+The site has been deployed on <b>Github pages</b>. 
 <hr>
 
 ## <u>8. Testing</u>
@@ -130,16 +125,16 @@ The site has been deployed on Github pages.
 
    The JavaScript code was put through the [JShint validator](https://jshint.com/) with minor errors such as unnecessary semicolons that have now been rectified.
 
-   ### **Test cases (user story based with screenshots)**
+   ### **Test cases**
 
    #### **Desktop**
 
-   ##### Landing page
+   #### <i>Landing page</i>
    As the user is on the landing page, the user is shown the game title in the header, and two images underneath with the rules of the game. There is a message that informs the user to enter a username in a text box, where the pointer is focused on the text box already as the landing page loads. The user has to enter text into the text box before the options for the two difficulty levels are displayed on the page, Easy Spock and Hard Devil. 
 
    ![landing-page-levels](docs/screenshots/landing-page_level-selected.png "Landing page with level selected")
 
-   ##### Game page
+   #### <i>Game page</i>
    When the user gets to the game page, the username that was typed into the text box on the landing page will appear on the left side of the screen. In between the username and computer name, there is a scoreboard that indicates the scores for the player and the computer. Underneath the scoreboard is a "Ready?" message, the choices the user needs to make which are represented as icons, and another message to promt the user to make the first move to start the game. 
    When the user hovers over the icons, the icons will "pop" out and is highlighted with a blue border. When the user clicks on a choice, the game starts immediately and the score will automatically update and the results message will appear to show the user whether they have won that round or not. If the user has won a round, the user's score in the scoreboard will light up green. If the user has lost the round, the computer's score in the scoreboard will light up red. If it's a draw, it will only be indicated through the results message.
    If the user clicks on the game title in the header, this will refresh the page and take the user to the landing page to restart the game.
@@ -158,14 +153,14 @@ The site has been deployed on Github pages.
    ![hard-game-page-390px](docs/screenshots/mobile_game-page-hard.png "Hard game page 390px")
 
    ### **Fixed bugs**
-   A loadlevels function and a keydown event listener was added to JavaScript in order to prompt the user to enter a username in the text box before progressing to the game page. Before this, the user was able to click on a difficulty level straight away before typing anything into the text box.
+   * A loadlevels function and a keydown event listener was added to JavaScript in order to prompt the user to enter a username in the text box before progressing to the game page. Before this, the user was able to click on a difficulty level straight away before typing anything into the text box.
    
-   When I was incorporating a second option for the difficulty level, I started by trying to run two functions to generate the computer choices for the Easy and Hard games. However, in the Easy game the computer was still generating the Hard choices of Love and Devil which should not have been part of the Easy game. To fix the bug, I created only one function to generate the computer choice, and created arrays for easy and hard choices in addition to an empty array option for controls. This helped to simplify the code and allowed the computer to generate choices for the Easy and Hard levels separately.
+   * When I was incorporating a second option for the difficulty level, I started by trying to run two functions to generate the computer choices for the Easy and Hard games. However, in the Easy game the computer was still generating the Hard choices of Love and Devil which should not have been part of the Easy game. To fix the bug, I created only one function to generate the computer choice, and created arrays for easy and hard choices in addition to an empty array option for controls. This helped to simplify the code and allowed the computer to generate choices for the Easy and Hard levels separately.
 
-   I had not included the playerChoice and computerChoice arguments within the win(), draw() and lose() functions that were nested within the game function. This resulted in both the player and computer scores updating at the same time whether the player won or lost. This was easily rectified by including the arguments within these functions.
+   * I had not included the playerChoice and computerChoice arguments within the win(), draw() and lose() functions that were nested within the game function. This resulted in both the player and computer scores updating at the same time whether the player won or lost. This was easily rectified by including the arguments within these functions.
 
    ### **Unfixed bugs**
-   If a user enters text into the input box, the difficulty levels will appear on the screen. But if the user then deletes text from the input box and then clicks one of the difficulty levels, they can still progress to the game page without a username.
+   There are no known unfixed bugs.
    
    ### **Supported screens and browsers**
    The site is fully supported for large, medium and small screen widths from widths larger than 1480px to small screens of 390px. The images and texts have all been adjusted so that the user experience is unaffected for different screen sizes.
